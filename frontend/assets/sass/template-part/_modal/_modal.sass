@@ -1,0 +1,155 @@
+#modal-login.modal
+    .modal-dialog.modal-md.modal-dialog-centered
+        .modal-content
+            .modal-header
+                @extend %flex-box
+                justify-content: flex-start
+                border-bottom: none
+                .close
+                    margin: -1rem auto -1rem -1rem
+                    display: inline-block
+                    font-weight: 400
+                    font-size: 34px
+                    line-height: 34px
+                    color: $colorBlack
+                    opacity: 1
+            .modal-body
+                .card
+                    padding-top: 30px
+                    position: relative
+                    border: none
+                    .logo__item
+                        width: 135px
+                        display: inline-block
+                        position: absolute
+                        top: -50px
+                        left: 50%
+                        transform: translateX(-50%)
+                    .tabs
+                        .card-header
+                            border-bottom: none
+                            background-color: transparent
+                            .nav.nav-pills.card-header-pills
+                                @extend %flex-box
+                                justify-content: center
+                                .nav-item
+                                    .nav-link
+                                        padding: 15px 35px
+                                        width: auto
+                                        background-color: transparent
+                                        color: #0072ce
+                                        border: none
+                                        border-radius: 50px
+                                        font: 300 20px/20px "Ermilov"
+                                        outline: none
+                                        cursor: pointer
+                                        &:before
+                                            display: none
+                                    .active
+                                        background-color: #fae053 !important
+                                        color: #0072ce !important
+                                        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05)
+                        .tab-content
+                            .tab-pane.card-body
+                                .form-login-registry-modal
+                                    .form-group.row
+                                        margin: 0 0 8px
+                                        [class*='col-']
+                                            &:first-child
+                                                font: 500 13px/14px 'Montserrat', sans-serif
+                                                color: $colorBlack
+                                            &:last-child
+                                                height: 56px
+                                        &:last-child
+                                            [class*='col-']
+                                                .btn-login-registry-modal
+                                                    padding: 15px 45px
+                                                    width: 100%
+                                                    display: inline-block
+                                                    background-color: $colorBlue
+                                                    font: 500 16px/16px $fontErmilov
+                                                    color: #fff
+                                                    border: none
+                                                    outline: none
+                                                    border-radius: 50px
+                                                    &:focus
+                                                        outline: none
+                                                        box-shadow: none
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+.modal
+    .modal-dialog.modal-md.modal-dialog-centered
+        .modal-content
+            .modal-header
+                @extend %flex-box
+                justify-content: flex-start
+                border-bottom: none
+                .close
+                    margin: -1rem auto -1rem -1rem
+                    display: inline-block
+                    font-weight: 400
+                    font-size: 34px
+                    line-height: 34px
+                    color: $colorBlack
+                    opacity: 1
+            .modal-body
+                .card
+                    padding-top: 30px
+                    position: relative
+                    border: none
+                    .logo__item
+                        width: 135px
+                        display: inline-block
+                        position: absolute
+                        top: -50px
+                        left: 50%
+                        transform: translateX(-50%)
+                    .tabs
+                        .card-header
+                            border-bottom: none
+                            background-color: transparent
+                            .nav.nav-pills.card-header-pills
+                                @extend %flex-box
+                                justify-content: center
+                                .nav-item
+                                    .nav-link
+                                        padding: 15px 35px
+                                        width: auto
+                                        background-color: transparent
+                                        color: #0072ce
+                                        border: none
+                                        border-radius: 50px
+                                        font: 300 20px/20px "Ermilov"
+                                        outline: none
+                                        cursor: pointer
+                                        &:before
+                                            display: none
+                                    .active
+                                        background-color: #fae053 !important
+                                        color: #0072ce !important
+                                        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05)
+                        .tab-content
+                            .tab-pane.card-body
+                                .form-login-registry-modal
+                                    .form-group.row
+                                        margin: 0 0 8px
+                                        [class*='col-']
+                                            &:first-child
+                                                font: 500 13px/14px 'Montserrat', sans-serif
+                                                color: $colorBlack
+                                            &:last-child
+                                                height: 56px
+                                        &:last-child
+                                            [class*='col-']
+                                                .btn-login-registry-modal
+                                                    padding: 15px 45px
+                                                    width: 100%
+                                                    display: inline-block
+                                                    background-color: $colorBlue
+                                                    font: 500 16px/16px $fontErmilov
+                                                    color: #fff
+                                                    border: none
+                                                    outline: none
+                                                    border-radius: 50px
+                                                    &:focus
+                                                        outline: none
+                                                        box-shadow: none

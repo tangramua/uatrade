@@ -1,0 +1,74 @@
+/* ---Begin banner-top-home--- */
+.home
+    .banner-top
+        height: 600px
+        width: 100%
+        @import "../../variable/background"
+        background: url( $Front-Dev__header_banner ) no-repeat center center
+        background-size: cover
+        .banner-top__content
+            padding-top: 55px
+            .entry-title
+                @extend %entry-title
+                h1
+                    margin: 0 0 20px
+                p
+                    font-weight: 700
+                    font-size: 35px
+                    line-height: 58px
+                    color: #fff
+            .search-form
+                margin: 0 0 120px
+                width: 100%
+                @extend %flex-box
+                justify-content: space-between
+                align-items: center
+                position: relative
+                .search-form__item-label
+                    margin: 0
+                    .input-item
+                        height: 50px
+                        width: 100%
+                        border: none
+                        outline: none
+                    &:first-child
+                        width: 95%
+                        .input-item
+                            @extend %input-home-item
+                    &:last-child
+                        width: 9.333%
+                        display: inline-block
+                        position: absolute
+                        top: -4px
+                        right: 15px
+                        .search-btn
+                            height: 60px
+                            width: 60px
+                            display: inline-block
+                            background: url( $Front-Dev__search_btn ) no-repeat center center $colorYellow
+                            background-size: 75% 75%
+                            border-radius: 50px
+                            border: 6px solid $colorBlue
+                            outline: none
+                            overflow: hidden
+                            cursor: pointer
+        .container
+            height: 100%
+            .banner-top__content
+                height: 100%
+                .row
+                    height: 100%
+            .banner-top__content .row
+                .col-md-6
+                    height: 100%
+                    @extend %flex-box
+                    flex-direction: column
+                    justify-content: flex-start
+                    &:last-child
+                        height: 100%
+                        @extend %flex-box
+                        flex-direction: column
+                        justify-content: flex-end
+                        align-items: center
+/* ---End banner-top-home--- */
+

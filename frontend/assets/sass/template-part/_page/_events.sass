@@ -1,0 +1,33 @@
+/* ---Begin events style--- */
+@import "../../variable/background"
+@import "../../template-part/_item/banner-top-events"
+.section-events
+    width: 100%
+    .container
+        .entry-title
+            margin: 0 0 30px
+            padding: 0
+            @extend %entry-title-second-two
+        @import "../_item/filter-event-speakers"
+        .filter-event-speakers
+            margin: 0 0 30px
+            .banner-top__filter-content
+                .filter-select
+                    @extend %flex-box
+                    .filter-date-time-select, .location-topic
+                        width: 48%
+                    .location-topic
+                        margin: 0
+                        padding: 12px 0 0
+            .filter-event-result
+                .filter-event-result__item
+                    .filter-event-result__item-description
+                        &:after
+                            height: 20px
+                    .filter-event-result__item-place
+                        &:after
+                            height: 65px
+                        .item-place
+                            padding: 24px 22px
+
+/* ---End events style--- */

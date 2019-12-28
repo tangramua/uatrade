@@ -1,0 +1,33 @@
+/* ---Begin banner-top-exporters--- */
+.events
+    .banner-top
+        padding: 50px 0 0
+        height: 450px
+        width: 100%
+        @import "../../variable/background"
+        background: url( $Front-Dev__single_exporters_banner_bg ) no-repeat center center
+        background-size: cover
+        .banner-top__content
+            padding-top: 55px
+            padding-bottom: 55px
+            background-color: #fff
+            position: relative
+            &:after
+                content: ''
+                height: 100%
+                width: 275px
+                background: url("/img/ukraine-now-logo-single-export.png") no-repeat right center #fff
+                background-size: contain
+                position: absolute
+                top: 50%
+                transform: translateY(-50%)
+                right: 0
+            .entry-title
+                padding: 0
+                width: 50%
+                @extend %entry-title
+                background-color: transparent
+                box-shadow: none
+                h1
+                    color: $colorBlue
+/* ---End banner-top-exporters--- */

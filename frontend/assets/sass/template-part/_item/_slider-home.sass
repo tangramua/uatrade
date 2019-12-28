@@ -1,0 +1,184 @@
+/* ---Begin slider home--- */
+.ukrainian-exposition-slider
+    padding: 60px 0 30px
+    .swiper-slide
+        margin: 0
+        padding: 0
+        @extend %flex-box
+        flex-direction: column
+        .swiper-slide__item
+            margin: 0
+            width: 100%
+            position: relative
+            z-index: 99
+            &:first-child
+                margin: 0
+                .event-exposition
+                    padding: 30px 0 15px
+                    @extend %flex-box
+                    position: relative
+                    transition: all .3s linear
+                    i
+                        margin: -30px 0 0
+                        width: 22px
+                    &:before
+                        display: none
+                        content: ''
+                        height: 22px
+                        width: 25px
+                        background: url("/img/event-marker.svg") no-repeat center center
+                        position: absolute
+                        top: 0
+                        left: 0
+                        transition: all .3s linear
+                    .event-exposition__item
+                        @extend %flex-box
+                        span
+                            transition: all .3s linear
+                            font-weight: 300
+                            font-style: normal
+                            font-size: 14px
+                            line-height: 14px
+                            color: #dedede
+                            a
+                                transition: all .3s linear
+                                font-weight: 300
+                                font-style: normal
+                                font-size: 14px
+                                line-height: 14px
+                                color: #dedede
+            &:last-child
+                margin: 0
+                .swiper-slide__item-img-link
+                    height: 229px
+                    width: 100%
+                    @extend %flex-box
+                    flex-direction: column
+                    flex-wrap: nowrap
+                    justify-content: center
+                    align-items: center
+                    align-content: center
+                    overflow: hidden
+                    span
+                        height: 100%
+                        width: 100%
+                        @extend %flex-box
+                        flex-direction: column
+                        flex-wrap: nowrap
+                        justify-content: center
+                        align-items: center
+                        align-content: center
+                        overflow: hidden
+                        background-color: #fff
+                        position: relative
+                        &:after
+                            padding: 50% 0
+                            content: ''
+                            height: 100%
+                            width: 100%
+                            text-align: center
+                            font-weight: 700
+                            font-size: 18px
+                            line-height: 18px
+                            color: $colorBlue
+                            text-transform: uppercase
+                            letter-spacing: 1px
+                            position: absolute
+                            top: 50%
+                            transform: translateY(-50%)
+                            left: 0
+                            z-index: 0
+                        img
+                            height: 100%
+                            width: 100%
+                            object-fit: contain
+                            position: relative
+                            z-index: 2
+                .swiper-slide__item-title
+                    padding: 15px 0 30px
+                    transition: all .3s linear
+                    .swiper-slide__item-title-link
+                        padding: 0 15px
+                        @extend %flex-box
+                        position: relative
+                        p, i
+                            width: auto
+                            display: inline
+                        p
+                            margin: 0
+                            height: 40px
+                            min-height: 40px
+                            text-overflow: clip
+                            overflow: hidden
+                            white-space: normal
+                            width: 94%
+                            font: 300 20px/20px $fontErmilov
+                            color: $colorBlue
+                            transition: all .3s linear
+                        i
+                            transition: all .3s linear
+                            visibility: hidden
+                            opacity: 0
+                            position: absolute
+                            top: 0
+                            right: 15px
+                            svg
+                                height: 15px
+                                width: 15px
+                                color: $colorBlue
+        &:hover
+            .swiper-slide__item
+                &:first-child
+                    .event-exposition
+                        &:before
+                            display: none
+                            content: ''
+                            height: 22px
+                            width: 25px
+                            background: url("/img/event-marker-hover.svg") no-repeat center center
+                            position: absolute
+                            top: 0
+                            left: 0
+                        .event-exposition__item
+                                span
+                                    a
+                                        color: $colorBlue
+                &:last-child
+                    .swiper-slide__item-title
+                        box-shadow: 0 10px 15px rgba(0, 0, 0, .05)
+                        .swiper-slide__item-title-link
+                            i
+                                visibility: visible
+                                opacity: 1
+.swiper-container
+    padding: 0 15px 60px
+    position: relative
+.swiper-button-group
+    width: 110px
+    display: inline-block
+    position: absolute
+    top: 90%
+    right: 15px
+    .swiper-button-prev, .swiper-button-next
+        background-color: #e4f0f9
+        background-image: none
+        @extend %flex-box
+        flex-direction: column
+        justify-content: center
+        align-items: center
+        align-content: center
+    .swiper-button-prev,
+    .swiper-button-next
+        height: 40px
+        width: 40px
+        border-radius: 50px
+        i
+            svg
+                color: $colorBlue
+    .swiper-button-prev
+        left: 0
+        right: auto
+    .swiper-button-next
+        right: 0
+        left: auto
+/* ---Emd slider home--- */

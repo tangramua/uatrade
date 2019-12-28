@@ -1,0 +1,145 @@
+/* ---Begin Contacts style--- */
+@import "../../variable/background"
+@import "../../template-part/_item/banner-top-home"
+.contacts
+    .contact-section
+        margin-top: 159px
+        .container
+            .entry-title
+                margin: 0 0 30px
+                padding: 0
+                background-color: transparent
+                box-shadow: none
+                @extend %entry-title
+                h1
+                    font-size: 48px
+                    line-height: 48px
+                    color: $colorBlue
+                    text-align: center
+            .sub-title
+                margin: 0 0 30px
+                font-weight: 400
+                font-size: 20px
+                line-height: 20px
+                color: #2d2926
+                p
+                    font-weight: 400
+                    font-size: 20px
+                    line-height: 20px
+                    color: #2d2926
+        .contacts-columns
+            width: 100%
+            .entry-title
+                @extend %entry-title-two-single-exporters
+            .contacts-columns__item
+                margin: 0 0 30px
+                width: 100%
+                .contact-form, .label-item
+                    @extend %form-ukraine-now
+                    .label-item
+                        &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3),
+                        &:nth-of-type(4), &:nth-of-type(5), &:nth-of-type(6)
+                            height: 69px
+                            width: 100%
+                        .contact-form__item
+                            transition: all .3s linear
+                .contacts-email-phone
+                    padding: 30px
+                    width: 100%
+                    background-color: #f1f7fc
+                    @extend %flex-box
+                    justify-content: flex-start
+                    .contacts-email-phone__item
+                        width: 48%
+                        .contacts-email-phone__item-title
+                            margin: 0 0 15px
+                            @extend %flex-box
+                            justify-content: flex-start
+                            align-items: center
+                            font: 300 20px/20px $fontErmilov
+                            color: #2d2926
+                            text-align: left
+                            text-transform: uppercase
+                            .icon-envelope, .icon-phone
+                                margin: 0 8px 0 0
+                                height: 24px
+                                width: 24px
+                                background-color: $colorBlue
+                                @extend %flex-box
+                                flex-direction: column
+                                flex-wrap: nowrap
+                                justify-content: center
+                                align-items: center
+                                align-content: center
+                                border-radius: 50px
+                                svg
+                                    height: 14px
+                                    width: 14px
+                                    color: #fff
+                            .icon-phone
+                                svg
+                                    transform: rotate(90deg)
+                        .contacts-email-phone__item-list
+                            margin: 0
+                            padding: 0
+                            list-style: none
+                            li
+                                margin: 0 0 15px
+                            li, li a
+                                font-weight: 400
+                                font-size: 16px
+                                line-height: 16px
+                                color: #2d2926
+                                text-decoration: none
+                                transition: all .3s linear
+                                a
+                                    display: inline-block
+                                    position: relative
+                                    &:after
+                                        content: ''
+                                        height: 1px
+                                        width: 0
+                                        background-color: $colorBlue
+                                        transition: all .3s linear
+                                        position: absolute
+                                        bottom: 0
+                                        left: 0
+                                    &:hover
+                                        color: $colorBlue
+                                        &:after
+                                            width: 100%
+.contact-form
+    input::-webkit-input-placeholder
+    text-overflow: ellipsis
+    font: 400 16px/16px 'Open Sans', sans-serif
+    color: #000
+    opacity: 1
+    transition: all .3s ease
+    textarea::-webkit-input-placeholder
+        text-overflow: ellipsis
+        font: 400 16px/16px 'Open Sans', sans-serif
+        color: #000
+        opacity: 1
+        transition: all .3s ease
+    input::-moz-placeholder
+        text-overflow: ellipsis
+        font: 400 16px/28px 'Open Sans', sans-serif
+        color: #000
+        opacity: 1
+        transition: all .3s ease
+    textarea::-moz-placeholder
+        text-overflow: ellipsis
+        font: 400 16px/28px 'Open Sans', sans-serif
+        color: #000
+        opacity: 1
+        transition: all .3s ease
+    input:focus::-webkit-input-placeholder
+        opacity: 0
+    textarea:focus::-webkit-input-placeholder
+        opacity: 0
+    input:focus::-moz-placeholder
+        opacity: 0
+    textarea:focus::-moz-placeholder
+        opacity: 0
+
+/* ---End Contacts style--- */

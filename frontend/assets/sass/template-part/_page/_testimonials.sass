@@ -1,0 +1,189 @@
+/* ---Begin testimonials style--- */
+@import "../../variable/background"
+@import "../../template-part/_item/banner-top-testimonials"
+.testimonials
+    .section-testimonials-slider
+        .container
+            .entry-title
+                padding: 0
+                background-color: transparent
+                box-shadow: none
+                @extend %entry-title
+                h2
+                    font: 300 48px/48px $fontErmilov
+                    color: #2d2926
+                    text-align: center
+            .section-testimonials-slider__item
+                .swiper-container
+                    padding: 0 50px
+                    .swiper-wrapper
+                        margin: 0
+                        padding: 90px 0
+                        .swiper-slide
+                            transition: all .3s linear
+                            transform: scale(1)
+                            text-align: center
+                            box-shadow: 0 0 5px #e8e9ed
+                            .swiper-slide__item
+                                .swiper-slide__item-top
+                                    margin: 0
+                                    padding: 60px 40px 0
+                                    .swiper-slide__item-img
+                                        margin: 0 0 15px
+                                        width: 100%
+                                        text-align: center
+                                        .item-img
+                                            margin: 0 0 15px
+                                            height: 80px
+                                            width: 80px
+                                            display: inline-block
+                                            border-radius: 50px
+                                            border: 1px solid #d2d2d2
+                                            overflow: hidden
+                                        .item-caption
+                                            font: 300 20px/20px $fontErmilov
+                                            color: #2d2926
+                                    .swiper-slide__item-position
+                                        padding: 0 0 15px
+                                        width: 75%
+                                        display: inline-block
+                                        font-weight: 400
+                                        font-size: 14px
+                                        line-height: 14px
+                                        color: #d2d2d2
+                                        position: relative
+                                        &:before
+                                            content: ''
+                                            height: 2px
+                                            width: 46px
+                                            background-color: $colorYellow
+                                            position: absolute
+                                            bottom: 0
+                                            left: 50%
+                                            transform: translateX(-50%)
+                                .swiper-slide__item-middle
+                                    padding: 20px
+                                    .swiper-slide__item-text
+                                        max-height: 100px
+                                        overflow: hidden
+                                    .swiper-slide__item-text, .swiper-slide__item-text p
+                                        font-weight: 300
+                                        font-size: 14px
+                                        line-height: 24px
+                                        color: #2d2926
+                                        text-align: left
+                            &:hover
+                                box-shadow: 0 10px 15px #e8e9ed
+                        .swiper-slide-next
+                            margin: 0
+                            transform: scale(1.2)
+                            position: relative
+                            z-index: 10
+                .swiper-button-group
+                    margin: auto
+                    .swiper-button-prev,
+                    .swiper-button-next
+                        height: 40px
+                        width: 40px
+                        background: none #e4f0f9
+                        border-radius: 50px
+                        @extend %flex-box
+                        flex-direction: column
+                        flex-wrap: nowrap
+                        justify-content: center
+                        align-items: center
+                        align-content: center
+                        position: absolute
+                        top: 50%
+                        transform: translateX(-50%)
+                        i
+                            svg
+                                height: 20px
+                                width: 20px
+                                color: $colorBlue
+                    .swiper-button-prev
+                        left: 20px
+                    .swiper-button-next
+                        right: -20px
+                .swiper-pagination-bullet
+                    width: 50px
+                    height: 10px
+                    border-radius: 5px
+
+    .section-share-your-impressions
+        padding: 90px 0
+        height: auto
+        width: 100%
+        background: url("/img/small-blue-bg.jpg") repeat top center
+        .container
+            .row
+                [class*='col-']
+                    &:first-child
+                        padding: 40px 0 0
+                        .entry-title
+                            @extend %entry-title
+                            h2
+                                font: 300 80px/80px $fontErmilov
+                                color: $colorYellow
+        .share-your-impressions-form
+            @extend %form-ukraine-now
+            .contact-form
+                .label-item
+                    &:nth-of-type(1),
+                    &:nth-of-type(2),
+                    &:nth-of-type(3),
+                    &:nth-of-type(4)
+                        height: 62px
+                        width: 100%
+                        display: block
+                    &:nth-of-type(4)
+                        height: 125px
+                    .contact-form__item.item-group-text
+                        .contact-form__item
+                            margin: 0
+                            border: 1px solid transparent
+                            transition: all .3s linear
+                        .contact-form__item.contact-select-item
+                            margin: 0
+                            border-bottom-left-radius: 0
+                            border-top-left-radius: 0
+                            border-top: none
+                            border-right: none
+                            border-bottom: none
+                .btn-inner
+                    .btn-item
+                        color: $colorBlue
+                        text-transform: uppercase
+                        background-color: $colorYellow
+                        &:hover
+                            color: #fff
+                            background-color: $colorBlack
+
+    .section-filter-event-speakers
+        .container
+            .entry-title
+                margin: 0 0 30px
+                padding: 0
+                @extend %entry-title-second-two
+            @import "../_item/filter-event-speakers"
+            .filter-event-speakers
+                margin: 0 0 30px
+                .banner-top__filter-content
+                    .filter-select
+                        @extend %flex-box
+                        .filter-date-time-select, .location-topic
+                            width: 48%
+                        .location-topic
+                            margin: 0
+                            padding: 12px 0 0
+                .filter-event-result
+                    .filter-event-result__item
+                        .filter-event-result__item-description
+                            &:after
+                                height: 20px
+                        .filter-event-result__item-place
+                            &:after
+                                height: 65px
+                            .item-place
+                                padding: 24px 22px
+/* ---End testimonials style--- */

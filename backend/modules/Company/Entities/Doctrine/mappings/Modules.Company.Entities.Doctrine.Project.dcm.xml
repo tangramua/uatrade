@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:gedmo="http://gediminasm.org/schemas/orm/doctrine-extensions-mapping"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd"
+>
+    <entity name="Modules\Company\Entities\Doctrine\Project"
+            repository-class="Modules\Company\Repositories\Doctrine\ProjectRepository"
+            table="company_projects">
+
+        <id name="id" type="integer" column="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+
+        <field name="name" type="string" column="name" precision="0" scale="0" nullable="false" unique="true"/>
+
+        <field name="displayName" type="string" column="display_name" precision="0" scale="0" nullable="false">
+            <gedmo:translatable/>
+        </field>
+
+        <field name="description" type="text" column="description" precision="0" scale="0" nullable="true">
+            <gedmo:translatable/>
+        </field>
+
+        <field name="photo" type="string" column="photo"  precision="0" scale="0" nullable="true"/>
+
+        <field name="totalEstimatedInvestment" type="string" column="total_estimated_investment"  precision="0" scale="0" nullable="true"/>
+
+
+        <field name="createdAt" type="datetime" column="created_at" precision="0" scale="0" nullable="false">
+            <gedmo:timestampable on="create"/>
+        </field>
+        <field name="updatedAt" type="datetime" column="updated_at" precision="0" scale="0" nullable="false">
+            <gedmo:timestampable on="update"/>
+        </field>
+
+        <many-to-one field="company" target-entity="Company" inversed-by="project">
+            <join-column name="company_id" referenced-column-name="id" />
+        </many-to-one>
+
+        <many-to-one field="companyExecutor" target-entity="Company" inversed-by="project">
+            <join-column name="company_executor" referenced-column-name="id" />
+        </many-to-one>
+
+        <many-to-many field="members" target-entity="Employee">
+            <join-table name="project_has_employee">
+                <join-columns>
+                    <join-column name="project_id" referenced-column-name="id" />
+                </join-columns>
+                <inverse-join-columns>
+                    <join-column name="employee_id" referenced-column-name="id" />
+                </inverse-join-columns>
+            </join-table>
+        </many-to-many>
+
+
+        <gedmo:translation entity="Modules\Core\Entities\Doctrine\Translation" locale="locale"/>
+
+        <lifecycle-callbacks>
+            <lifecycle-callback type="preUpdate" method="preUpdate"/>
+        </lifecycle-callbacks>
+
+    </entity>
+</doctrine-mapping>

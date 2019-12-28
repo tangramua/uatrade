@@ -1,0 +1,179 @@
+/* ---Begin banner-top-exporters--- */
+.exporters
+    .banner-top
+        height: auto
+        width: 100%
+        @import "../../variable/background"
+        background: url( $Front-Dev__header_banner ) no-repeat 60% 50%
+        background-size: cover
+        .banner-top__content
+            padding-top: 55px
+            padding-bottom: 30px
+            .entry-title
+                @extend %entry-title
+            .search-form
+                margin: 0
+                width: 100%
+                @extend %flex-box
+                justify-content: space-between
+                align-items: center
+                position: relative
+                z-index: 2
+                .search-form__item-label
+                    margin: 0
+                    .input-item
+                        height: 50px
+                        width: 100%
+                        border: none
+                        outline: none
+                    &:first-child
+                        width: 95%
+                        .input-item
+                            @extend %input-home-item
+                    &:last-child
+                        width: 9.333%
+                        display: inline-block
+                        position: absolute
+                        right: 15px
+                        .search-btn
+                            height: 60px
+                            width: 60px
+                            display: inline-block
+                            background: url( $Front-Dev__search_btn ) no-repeat center center $colorYellow
+                            background-size: 75% 75%
+                            border-radius: 50px
+                            border: 6px solid $colorBlue
+                            outline: none
+                            overflow: hidden
+                            cursor: pointer
+        .container
+            height: auto
+            .banner-top__content
+                height: auto
+                .row
+                    height: auto
+            .banner-top__content .row
+                .col-md-6
+                    height: auto
+                    @extend %flex-box
+                    flex-direction: column
+                    justify-content: center
+                    &:last-child
+                        height: 600px
+                        @extend %flex-box
+                        flex-direction: column
+                        justify-content: flex-end
+                        align-items: center
+            .banner-top__content
+                .row:nth-of-type(2)
+                    margin: -60px 0 0
+                    [class*='col-']
+                        .banner-top__filter
+                            .card
+                                background-color: transparent
+                                border: none
+                                .tabs
+                                    .card-header
+                                        background-color: transparent
+                                        border-bottom: none
+                                        .nav.nav-tabs.card-header-tabs
+                                            .nav-item
+                                                .nav-link
+                                                    padding: 15px 35px
+                                                    background-color: transparent
+                                                    color: #fff
+                                                    border: none
+                                                    border-radius: 50px
+                                                    font: 300 20px/20px $fontErmilov
+                                                .nav-link.active
+                                                    background-color: $colorYellow
+                                                    color: $colorBlue
+                                                    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05)
+                                    .tab-content
+                                        height: 60px
+                                        .tab-pane.card-body
+                                            padding: 1.25rem 0
+                                            .banner-top__filter-content
+                                                font-weight: 400
+                                                font-style: normal
+                                                font-size: 14px
+                                                line-height: 14px
+                                                color: #fff
+                                                @extend %flex-box
+                                                .custom-control.custom-checkbox.custom-control-inline
+                                                    &:nth-of-type(5n+1)
+                                                        margin: 0
+                                                .custom-control.custom-checkbox.custom-control-inline
+                                                    margin: 0 0 0 30px
+                                                    padding: 0 20px 0 20px
+                                                    position: relative
+                                                    &:after
+                                                        content: ''
+                                                        height: 15px
+                                                        width: 15px
+                                                        position: absolute
+                                                        top: 0
+                                                        left: 0
+                                                    &:first-child
+                                                        margin: 0
+                                                    .custom-control-label
+                                                        &:before
+                                                            top: 0
+                                                            right: -20px
+                                                            left: auto
+                                                            background-color: transparent
+                                                            background: url("/img/checkbox.svg") no-repeat center center
+                                                        &:after
+                                                            top: 0
+                                                            right: -30px
+                                                            left: auto
+                                                        cursor: pointer
+                                                        span
+                                                            position: relative
+                                                            &:after
+                                                                content: ''
+                                                                height: 1px
+                                                                width: 0
+                                                                background-color: #fff
+                                                                transition: all .3s linear
+                                                                position: absolute
+                                                                bottom: 0
+                                                                left: 0
+                                                        &:hover
+                                                            span
+                                                                &:after
+                                                                    width: 100%
+                                                    .custom-control-input:focus ~ .custom-control-label::before
+                                                        box-shadow: none
+                                                    .custom-control-input:checked ~ .custom-control-label::after
+                                                        content: ''
+                                                        height: 15px
+                                                        width: 15px
+                                                        background-image: url("/img/checkbox-checked.svg")
+                                                        background-size: 100% 100%
+                                                        position: absolute
+                                                        top: 0
+                                                        right: -21px
+                                                        left: auto
+                                                .machinery_engineering
+                                                    &:after
+                                                        background: url("/img/machinery-engineering-icon.svg") no-repeat center center
+                                                .food_beverages
+                                                    &:after
+                                                        background: url("/img/food-beverages-icon.svg") no-repeat center center
+                                                .ict_high_tech_innovations
+                                                    &:after
+                                                        background: url("/img/high-tech-innovations-icon.svg") no-repeat center center
+                                                .education_tourism
+                                                    &:after
+                                                        background: url("/img/education-tourism-icon.svg") no-repeat center center
+                                                .creative_industries
+                                                    &:after
+                                                        background: url("/img/creative-industries-icon.svg") no-repeat center center
+                                                .state_enterprises
+                                                    &:after
+                                                        background: url("/img/state-enterprises-icon.svg") no-repeat center center
+                                                .other
+                                                    &:after
+                                                        background: url("/img/other-icon.svg") no-repeat center center
+/* ---End banner-top-exporters--- */

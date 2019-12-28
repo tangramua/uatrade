@@ -1,0 +1,512 @@
+/* ---Begin Main style--- */
+@import "../../variable/background"
+@import "../../template-part/_item/banner-top-home"
+.section-filter-event-speakers
+    .container
+        .entry-title
+            margin: 0 0 30px
+            padding: 0
+            @extend %entry-title-second-two
+        @import "../_item/filter-event-speakers"
+        .filter-event-speakers
+            margin: 0 0 30px
+            .filter-event-result
+                .filter-event-result__item
+                    .filter-event-result__item-description
+                        &:after
+                            height: 20px
+                    .filter-event-result__item-place
+                        &:after
+                            height: 65px
+                        .item-place
+                            padding: 24px 22px
+.section-latest-news
+    .container
+        .section-latest-news__item
+            .entry-title
+                @extend %entry-title-second-two
+            .latest-news
+                .latest-news__item
+                    .latest-news__item-article
+                        @extend %flex-box
+                        transition: all .3s linear
+                        @extend %latest-news__item-article
+                        .latest-news-link, .latest-news-article
+                            margin: 0
+                            width: 40%
+                        .latest-news-link
+                            margin: 0
+                            display: block
+                            .latest-news-img-thumbnail
+                                margin: 0
+                                height: 256px
+                                width: 100%
+                                position: relative
+                                &:after
+                                    padding: 50% 0
+                                    content: ''
+                                    height: 100%
+                                    width: 100%
+                                    background-color: $colorBlue
+                                    text-align: center
+                                    font-weight: 700
+                                    font-size: 18px
+                                    line-height: 18px
+                                    color: rgba(255, 255, 255, 0.76)
+                                    text-transform: uppercase
+                                    letter-spacing: 1px
+                                    position: absolute
+                                    top: 50%
+                                    transform: translateY(-50%)
+                                    left: 0
+                                    z-index: -1
+                        .latest-news-article
+                            padding: 0 15px 0 30px
+                            width: 60%
+                            @extend %flex-box
+                            flex-direction: column
+                            justify-content: flex-start
+                            .category-title
+                                margin: 0 0 15px
+                                padding: 8px 0
+                                width: 100%
+                                font-weight: 400
+                                font-style: normal
+                                font-size: 12px
+                                line-height: 12px
+                                //font: 400 12px/12px $fontMontserrat sans-serif
+                                color: #2d2926
+                                border-bottom: 1px solid $colorYellow
+                                transition: all .3s linear
+                                position: relative
+                                @extend %flex-box
+                                &:after
+                                    content: ''
+                                    height: 1px
+                                    width: 0
+                                    background-color: $colorBlue
+                                    transition: all .3s linear
+                                    position: absolute
+                                    bottom: -1px
+                                    left: 0
+                                .latest-news-link
+                                    width: 100%
+                                    @extend %flex-box
+                                    p, i
+                                        display: inline-block
+                                    p
+                                        margin: 0
+                                        font-weight: 400
+                                        font-style: normal
+                                        font-size: 12px
+                                        line-height: 12px
+                                        //font: 400 12px/12px $fontMontserrat sans-serif
+                                        color: #2d2926
+                                        transition: all .3s linear
+                                    i
+                                        margin: -4px 0 0
+                                        height: auto
+                                        svg
+                                            height: 15px
+                                            width: 15px
+                                            color: #dedede
+                                            transition: all .3s linear
+                                    &:hover
+                                        p
+                                            color: $colorBlue
+                                        i
+                                            svg
+                                                color: $colorBlue
+                                &:hover
+                                    &:after
+                                        content: ''
+                                        height: 1px
+                                        width: 100%
+                                        background-color: $colorBlue
+                                        position: absolute
+                                        bottom: -1px
+                                        left: 0
+                                    .latest-news-link
+                                        p
+                                            color: $colorBlue
+                                        i
+                                            svg
+                                                color: $colorBlue
+                            .article-thumbnail
+                                width: 100%
+                                .article-thumbnail__title
+                                    margin: 0 0 15px
+                                    a
+                                        display: inline
+                                        width: 100%
+                                        font: 300 20px/20px $fontErmilov
+                                        color: $colorBlue
+                                        text-decoration: none
+                                        transition: all .3s linear
+                                        border-bottom: 2px solid $colorBlue
+                                        outline: none
+                                        &:hover
+                                            border-bottom: 2px solid transparent
+                                .article-thumbnail__content
+                                    height: 120px
+                                    min-height: 120px
+                                    overflow: hidden
+                                    font-weight: 400
+                                    font-style: normal
+                                    font-size: 16px
+                                    line-height: 24px
+                                    color: #2d2926
+                                    p
+                                        margin: 0
+                                        font-weight: 400
+                                        font-style: normal
+                                        font-size: 16px
+                                        line-height: 24px
+                                        color: #2d2926
+                                        a
+                                            display: inline
+                                            font-weight: 400
+                                            font-style: normal
+                                            font-size: 16px
+                                            line-height: 24px
+                                            color: $colorBlue
+.all-more
+    padding: 60px 0 15px
+    width: 100%
+    display: flex
+    justify-content: center
+    .all-more__link
+        @extend %all-more__link
+        padding: 10px 40px
+        width: auto
+
+.section-speakers
+    .container
+        .section-speakers__item
+            margin: 0 0 35px
+            padding: 0 30px
+            background-color: $colorYellow
+            box-shadow: 0 0 50px 15px $colorYellow
+            .entry-title
+                @extend %entry-title-second-two
+            .speakers-about
+                .speakers-about__item, .speakers-about-link, .speakers-about-img-thumbnail,
+                .speakers-about-article, .speakers-name, .article-thumbnail,
+                .article-thumbnail__title, .speakers-title__link, .article-thumbnail__content
+                    width: 100%
+                .speakers-about__item
+                    width: 100%
+                    @extend %flex-box
+                    flex-direction: column
+                    transition: all .3s linear
+                    &:hover
+                        box-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.25)
+                    .speakers-about-link
+                        height: 150px
+                        .speakers-about-img-thumbnail
+                            margin: 0
+                            height: 100%
+                            width: 100%
+                            object-fit: cover
+                            position: relative
+                            &:after
+                                padding: 50% 0
+                                content: ''
+                                height: 100%
+                                width: 100%
+                                background-color: #fff
+                                text-align: center
+                                font-weight: 700
+                                font-size: 18px
+                                line-height: 18px
+                                color: rgba(255, 255, 255, 0.76)
+                                text-transform: uppercase
+                                letter-spacing: 1px
+                                position: absolute
+                                top: 50%
+                                transform: translateY(-50%)
+                                left: 0
+                                z-index: 0
+                            img
+                                position: relative
+                                z-index: 2
+                    .speakers-about-article
+                        padding: 20px 24px 30px
+                        background-color: #fff
+                        .speakers-name
+                            font-weight: 700
+                            font-style: normal
+                            font-size: 20px
+                            line-height: 20px
+                            //font: 400 12px/12px $fontMontserrat sans-serif
+                            color: #2d2926
+                            text-align: center
+                            p
+                                font-weight: 700
+                                font-style: normal
+                                font-size: 20px
+                                line-height: 20px
+                                //font: 400 12px/12px $fontMontserrat sans-serif
+                                color: #2d2926
+                                letter-spacing: -1px
+                        .article-thumbnail
+                            .article-thumbnail__title
+                                margin: 0 0 15px
+                                .speakers-title__link
+                                    @extend %flex-box
+                                    font: 300 14px/18px $fontErmilov
+                                    color: $colorBlue
+                                    p, i
+                                        width: auto
+                                        display: inline-block
+                                    p
+                                        margin: 0
+                                        font: 300 14px/18px $fontErmilov
+                                        color: $colorBlue
+                                    i
+                                        margin: -4px 0 0
+                                        height: auto
+                                        svg
+                                            height: 15px
+                                            width: 15px
+                                            color: #dedede
+                                            transition: all .3s linear
+                                &:hover
+                                    .speakers-title__link
+                                        i svg
+                                            color: $colorBlue
+                            .article-thumbnail__content
+                                height: 150px
+                                min-height: 150px
+                                overflow: hidden
+                            .article-thumbnail__content
+                                font-weight: 600
+                                font-style: normal
+                                font-size: 14px
+                                line-height: 24px
+                                color: #2d2926
+                                ul
+                                    list-style: none
+                                    li
+                                        margin: 0 0 8px
+                                        padding: 0 0 0 15px
+                                        font-weight: 600
+                                        font-style: normal
+                                        font-size: 14px
+                                        line-height: 24px
+                                        color: #2d2926
+                                        position: relative
+                                        &:before
+                                            content: '\2022'
+                                            font-weight: 700
+                                            font-style: normal
+                                            font-size: 20px
+                                            line-height: 20px
+                                            color: $colorBlue
+                                            position: absolute
+                                            top: 2px
+                                            left: 0
+                .row
+                    [class*='col-']
+                        .speakers-about__item
+                            .speakers-about-link
+                                height: 240px
+                                .speakers-about-img-thumbnail
+                                    &:after
+                                        display: none
+                                    position: relative
+                                    img
+                                        height: 100%
+                                        width: 100%
+                                        object-fit: cover
+                                        position: absolute
+                                        left: 0
+                                        top: 0
+                                        right: 0
+                                        bottom: 0
+                            .speakers-about-article
+                                height: auto
+                            .speakers-about-article .article-thumbnail .article-thumbnail__title
+                                margin: 0 0 15px
+                                padding: 0 0 15px
+                                height: 125px
+                                max-height: 125px
+                                overflow: hidden
+                                border-bottom: 4px solid $colorYellow
+                            .speakers-about-article .article-thumbnail .article-thumbnail__title,
+                            .speakers-about-article .article-thumbnail .article-thumbnail__title p
+                                font: 300 14px/18px $fontErmilov
+                                color: $colorBlue
+                                text-align: center
+                            .speakers-about-article .article-thumbnail .article-thumbnail__title p
+                                margin: 0
+.speakers-bg
+    height: auto
+    width: 100%
+    background: url( $Front-Dev__speakers_bg ) no-repeat center center
+    background-size: cover
+
+.section-ukrainian-exposition
+    padding-bottom: 0
+    .section-ukrainian-exposition__item
+        .entry-title
+            margin: 0 0 15px
+            @extend %entry-title-second-two
+        .ukrainian-exposition-slider
+            width: 100%
+            //background: url("/img/gray-dashed-border.png") repeat-x 100% 3%
+        @import "../_item/slider-home"
+        .ukrainian-exposition-slider
+            padding: 0 0 30px
+
+.section-complex-served-expo
+    .container-fluid
+        position: relative
+        .ampersand
+            font: 300 42px/42px "Ermilov"
+            color: $colorBlue
+            position: absolute
+            left: 50%
+            top: 45px
+            transform: translateX(-50%)
+            z-index: 1
+        .ampersand:before
+            width: 50%
+            position: absolute
+            content: ''attr(data-title)''
+            color: $colorYellow
+            height: 42px
+            overflow: hidden
+
+        .row
+            [class*='col-']
+                padding-right: 0
+                padding-left: 0
+                .complex-served-expo-bg
+                    height: 366px
+                    .complex-served-expo-bg__item .served-expo-block .served-expo-block__item
+                        height: 100px
+                &:first-child
+                    .complex-served-expo-bg
+                        padding: 30px 50px
+                        background: url("/img/small-blue-bg.jpg") repeat top center
+                        @extend %flex-box
+                        flex-direction: column
+                        justify-content: flex-start
+                        align-items: flex-end
+                        align-content: flex-end
+                        .entry-title
+                            margin: 0 -35px 30px 0 !important
+                            @extend %entry-title-second-two
+                            h2
+                                font-size: 40px
+                                line-height: 40px
+                                color: $colorYellow
+                        .complex-served-expo-bg__item
+                            width: 40%
+                            text-align: center
+                            .served-expo-block
+                                background-color: $colorBlue
+                                box-shadow: 0 0 50px 15px rgba(0,113,206,1)
+                                .entry-title
+                                    margin: 0 0 15px
+                                    h3
+                                        font: 300 20px/20px $fontErmilov
+                                        color: #fff
+                                .served-expo-block__item
+                                    margin: 0 0 15px
+                                    padding: 0 15px
+                                    max-height: 96px
+                                    overflow: hidden
+                                    font: 500 16px/24px $fontMontserrat
+                                    color: #fff
+                                    text-align: center
+                                .all-more
+                                    padding: 15px 0
+                                    .all-more__link
+                                        @extend %all-more__link
+                                        color: $colorYellow
+                                        text-decoration: none
+                                        outline: none
+                                        border-radius: 50px
+                                        border: 2px solid $colorYellow
+                                        transition: all .3s linear
+                                        padding: 10px 40px
+                                        width: auto
+                                        &:hover
+                                            background-color: $colorYellow
+                                            color: #2d2926
+                &:last-child
+                    .complex-served-expo-bg
+                        padding: 30px 50px
+                        background: url("/img/small-yellow-bg.jpg") repeat top center
+                        @extend %flex-box
+                        flex-direction: column
+                        justify-content: flex-start
+                        align-items: flex-start
+                        align-content: flex-start
+                        .entry-title
+                            margin: 0 0 30px -35px !important
+                            @extend %entry-title-second-two
+                            h2
+                                font-size: 40px
+                                line-height: 40px
+                        .complex-served-expo-bg__item
+                            width: 40%
+                            text-align: center
+                            .served-expo-block
+                                background-color: $colorYellow
+                                box-shadow: 0 0 10px 15px $colorYellow
+                                .entry-title
+                                    margin: 0 0 15px
+                                    h3
+                                        font: 300 20px/20px $fontErmilov
+                                        color: $colorBlack
+                                .served-expo-block__item
+                                    margin: 0 0 15px
+                                    padding: 0 15px
+                                    max-height: 96px
+                                    overflow: hidden
+                                    font: 500 16px/24px $fontMontserrat
+                                    color: $colorBlack
+                                    text-align: center
+                                .all-more
+                                    padding: 15px 0
+
+.section-exhibition-partners
+    .section-exhibition-partners__item
+        .entry-title
+            margin: 0 0 15px
+            @extend %entry-title-second-two
+        .ukrainian-exposition-slider
+            .swiper-wrapper
+                @extend %flex-box
+    .sub-footer__item
+        width: 100%
+        .container
+            .row [class*='col-']
+                @extend %flex-box
+                flex-direction: column
+                flex-wrap: nowrap
+                justify-content: center
+                align-items: center
+                align-content: center
+        .caption-columns
+            .entry-title
+                padding: 0 50px
+                width: 100%
+                text-align: center
+                h5
+                    margin: 0
+                    font: 700 12px/24px $fontMontserrat
+                    color: $colorBlack
+.section-exhibition-partners__item
+    .row [class*='col-']
+        @extend %flex-box
+        flex-direction: column
+        flex-wrap: nowrap
+        justify-content: center
+        align-items: center
+        align-content: center
+
+/* ---End Main style--- */

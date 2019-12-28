@@ -1,0 +1,70 @@
+/* ---Begin header style--- */
+.header, .header__item
+    width: 100%
+    .header__item
+        &:first-child
+            padding: 33px 0
+            background-color: #fff
+            box-shadow: 0 5px 15px rgba(0,0,0,0.15)
+            transition: all .3s linear
+            position: fixed
+            left: 0
+            top: 0
+            right: 0
+            z-index: 9999
+            @import "_navigation/navigation"
+.isSticky
+    .header__item.header__item_sticky
+        padding: 15px 0
+        .container
+            .header__item-nav
+                .navbar.navbar-dark.bg-info.navbar-expand-md
+                    .navbar-brand.logo.active
+                        margin: 0 -75px 0 0
+                        width: 14%
+.header.isSticky + .content > .main
+    margin: 0
+.header.isSticky
+    .header__item.header__item_sticky
+        .container
+            .header__item-nav
+                .navbar.navbar-dark.bg-info.navbar-expand-md
+                    .navbar-collapse.collapse
+                        .navbar-nav.navigation-menu
+                            .nav-item.b-nav-dropdown.dropdown
+                                .dropdown-menu
+                                    margin: 0
+                                    padding: 0
+                                    height: 0
+                                    width: 100%
+                                    display: table
+                                    background: url("/img/menu-bg.jpg") no-repeat center right #fff
+                                    background-size: 57.444% 100%
+                                    visibility: hidden
+                                    opacity: 0
+                                    border-radius: 0
+                                    border: none
+                                    transition: all .3s linear
+                                    position: fixed
+                                    left: 0
+                                    top: 110px !important
+                                    right: 0
+                                    z-index: -1 !important
+                                .dropdown-menu.dropdown-menu-right.show
+                                    height: 250px
+                                    width: 100%
+                                    display: table
+                                    visibility: visible
+                                    opacity: 1
+                                    position: fixed
+                                    left: 0
+                                    top: 110px
+                                    right: 0
+                                    z-index: 0
+.header__item
+    .container
+        position: relative
+.logo-mobile
+    display: none
+    transition: all .3s linear
+/* ---End header style--- */

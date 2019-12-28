@@ -1,0 +1,307 @@
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* ---Begin link style --- */
+%navigation-menu__item-link,
+%clone-menu-top__item-link
+    padding: 8px 0
+    font: 300 20px/20px $fontErmilov
+    color: #000
+    transition: all .3s ease
+    text-decoration: none
+    position: relative
+    &:before
+        content: ''
+        height: 3px
+        width: 0
+        display: inline-block
+        background-color: $colorYellow
+        transition: all .3s ease
+        position: absolute
+        left: 0
+        bottom: 0
+    &:hover
+        color: $colorBlue
+        &:before
+            width: 100%
+%clone-menu-top__item-link
+    width: auto
+    display: inline-block
+    font: 300 14px/14px $fontErmilov
+    color: #fff
+    &:before
+        content: ''
+        height: 3px
+        width: 0
+        display: inline-block
+        background-color: $colorYellow
+        transition: all .3s ease
+        position: absolute
+        left: 0
+        bottom: 0
+    &:hover
+        color: #000
+        &:before
+            width: 100%
+%btn-subscribe
+    padding: 8px
+    height: 50px
+    width: 100%
+    background-color: $colorYellow
+    box-sizing: border-box
+    font: 300 16px/16px $fontErmilov
+    color: $colorBlue
+    outline: none
+    border-radius: 50px
+    cursor: pointer
+/* ---End link style --- */
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* ---Begin flex style --- */
+%flex-box
+    display: flex
+    flex-direction: row
+    flex-wrap: wrap
+    justify-content: space-between
+    align-items: flex-start
+    align-content: flex-start
+/* ---End flex style --- */
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* ---Begin minHeight footer columns--- */
+%min-height-columns
+    height: 100%
+    min-height: 190px
+/* ---End minHeight footer columns--- */
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* ---Begin input home style--- */
+%input-home-item
+    padding: 0 65px 0 20px
+    border-top-left-radius: 50px
+    border-bottom-left-radius: 50px
+/* ---End input home style--- */
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* ---Begin title heading --- */
+%entry-title
+    margin: 0
+    padding: 15px
+    background-color: $colorBlue
+    box-shadow: 0 0 50px 15px rgba(0,113,206,1)
+    h1
+        margin: 0
+        font: 300 80px/80px $fontErmilov
+        color: $colorYellow
+%entry-title-second-two
+    margin: 0 0 60px
+    padding: 15px
+    text-align: center
+    h2
+        margin: 0
+        display: inline-block
+        font: 300 52px/52px $fontErmilov
+        color: $colorBlue
+
+%entry-title-second-three
+    margin: 0 0 60px
+    padding: 15px
+    h3
+        margin: 0
+        font: 300 20px/20px $fontErmilov
+        color: #2d2926
+        text-align: center
+%entry-title-two-single-exporters
+    margin: 0 0 30px
+    padding: 0 0 10px
+    border-bottom: 2px solid $colorYellow
+    @extend %entry-title-second-three
+    h2
+        font: 300 22px/22px $fontErmilov
+        color: $colorBlue
+        text-align: left
+        text-transform: uppercase
+%latest-news__item-article
+    &:hover
+        box-shadow: 0 10px 15px rgba(153,153,153,.05)
+%all-more__link
+    padding: 10px 52px
+    display: inline
+    font-weight: 700
+    font-style: normal
+    font-size: 16px
+    line-height: 16px
+    color: $colorBlue
+    text-decoration: none
+    outline: none
+    border-radius: 50px
+    border: 2px solid $colorBlue
+    transition: all .3s linear
+    cursor: pointer
+    &:hover
+        background-color: $colorBlue
+        color: #fff
+/* ---End title heading --- */
+
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+/* ---Begin form style --- */
+%form-ukraine-now
+    width: 100%
+    .form-control
+        &:focus
+            border-color: #b9bcc5
+            box-shadow: none
+    .contact-form__item
+        margin: 0 0 20px
+        padding: 6px 20px
+        height: 44px
+        border: 1px solid #b9bcc5
+        border-radius: 50px
+        outline: none
+    .help-block.invalid-feedback
+        margin: -18px 0 7px
+        padding: 0 15px
+    .contact-form__item.form-control.is-invalid
+        border: 1px solid #dc3545 !important
+        .input-group-text
+            border: none
+    .text-area-item
+        padding: 13px 20px
+        height: 100px
+        font-weight: 400
+        font-size: 16px
+        line-height: 22px
+        color: #2d2926
+        resize: none
+        border-radius: 25px
+    .input-group.contact-form__item.item-group-text
+        padding: 0
+        @extend %flex-box
+        justify-content: space-between
+        align-items: center
+        background-color: #fff
+        .input-group-prepend
+            height: 100%
+            width: 14.333%
+            .input-group-text
+                padding: 10px 22.555px
+                width: 100%
+                border-top-left-radius: 50px
+                border-bottom-left-radius: 50px
+                span
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 16px
+                    color: #2d2926
+        .contact-select-item.open
+            .dropdown-toggle
+                .vs__selected-options
+                    .selected-tag
+                        padding: 0 0 0 15px
+                        top: 10px
+                .vs__actions
+                    i
+                        &:before
+                            margin: 0 0 0
+                            transition: all .3s linear
+                            border-color: #2d2926
+                            border-style: solid
+                            border-width: 2px 2px 0 0
+                            content: ''
+                            display: inline-block
+                            height: 10px
+                            width: 10px
+            .dropdown-menu
+                margin: 0
+                padding: 0
+                display: block
+                position: absolute
+                top: 100%
+                left: 0
+                z-index: 1000
+                min-width: 160px
+                width: 97%
+                overflow-y: scroll
+                border: none
+                box-shadow: none
+                border-radius: 0
+                text-align: left
+                list-style: none
+                background: #fff
+                li a
+                    padding: 10px 15px
+                    transition: all .3s linear
+                    &:hover
+                        background-color: $colorBlue
+                .active
+                    background-color: #f1f7fc
+        .contact-select-item
+            height: 100%
+            width: 85.333%
+            .dropdown-toggle
+                margin: 0
+                padding: 0
+                border-radius: 0
+                border: none
+                &:after
+                    display: none
+                .vs__selected-options
+                    padding: 0
+                    .selected-tag
+                        margin: 0
+                        padding: 0 0 0 15px
+                .vs__actions
+                    margin: 0 15px 0 0
+                    padding: 0
+                    button span
+                        margin: 6px 0 0
+                        font-weight: 400
+                        color: #2d2926
+                        display: none
+                    i
+                        &:before
+                            transition: all .3s linear
+                            border-color: #2d2926
+                            border-style: solid
+                            border-width: 2px 2px 0 0
+                            content: ''
+                            display: inline-block
+                            height: 10px
+                            width: 10px
+                            margin: -8px 0 0
+    .btn-inner
+        margin: 0
+        width: 100%
+        .btn-item
+            margin: 0
+            padding: 14px 35px
+            outline: none
+            background-color: $colorBlue
+            border-radius: 50px
+            border: none
+            font: 300 16px/16px $fontErmilov
+            color: #fff
+            transition: all .3s linear
+            &:focus
+                box-shadow: none
+            &:hover
+                background-color: #000
+/* ---End form style --- */
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+/* ---Begin navbar-nav navigation-menu style --- */
+@mixin navbar-nav-navigation-menu()
+    width: 100% //!important
+    display: flex
+    flex-direction: column
+    flex-wrap: nowrap
+    justify-content: flex-start
+    align-items: flex-start
+    align-content: flex-start
+    position: relative
+    z-index: 1
+    li.nav-item
+        width: 100%
+        display: block
+/*@mixin positionTopDropdownHeight()
+    top: 135px
+
+/* ---End flex style --- */

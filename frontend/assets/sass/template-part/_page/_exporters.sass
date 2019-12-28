@@ -1,0 +1,282 @@
+$img_machinery_engineering: "/img/machinery-engineering-icon.svg"
+$img_food_beverages: "/img/food-beverages-icon.svg"
+$img_ict_high_tech_innovations: "/img/high-tech-innovations-icon.svg"
+$img_education_tourism: "/img/education-tourism-icon.svg"
+$img_creative_industries: "/img/creative-industries-icon.svg"
+$img_state_enterprises: "/img/state-enterprises-icon.svg"
+$img_other: "/img/other-icon.svg"
+
+
+/* ---Begin Main style--- */
+@import "../../variable/background"
+@import "../../template-part/_item/banner-top-exporters"
+.section-filter-exporters
+    .filter-exporters
+        .row
+            [class*='col-']
+                .filter-exporters__item
+                    width: 100%
+                &:first-child
+                    .filter-exporters__item
+                        .btn-sort-alpha
+                            padding: 0 0 22px 0
+                            .custom-control.custom-checkbox.custom-control-inline
+                                padding: 0
+                                min-height: 16px
+                                font-size: 0
+                                transition: all .3s linear
+                                border-bottom: 2px solid #2d2926
+                                .custom-control-label
+                                    padding: 0 20px 0 0
+                                    font-size: 0
+                                    cursor: pointer
+                                    &:before
+                                        content: ''
+                                        height: 15px
+                                        width: 15px
+                                        background: url("/img/up-arrow-down-icon.svg") no-repeat center center
+                                        position: absolute
+                                        top: 0
+                                        right: 0
+                                        left: auto
+                                    span
+                                        font: 300 16px/16px $fontErmilov
+                                        color: #2d2926
+                            .custom-control.custom-checkbox.custom-control-inline
+                                .custom-control-input:checked ~ .custom-control-label::before
+                                    display: none
+                                .custom-control-input:focus ~ .custom-control-label::before
+                                    box-shadow: none
+                                .custom-control-input:checked ~ .custom-control-label::after
+                                    content: ''
+                                    height: 15px
+                                    width: 15px
+                                    background: url("/img/up-arrow-down-icon-checked.svg") no-repeat center center
+                                    position: absolute
+                                    top: 0
+                                    right: 0
+                                    left: auto
+                        .filter-exporters__company
+                            padding: 15px 0
+                            width: 100%
+                            .filter-exporters__company-item
+                                height: auto
+                                width: 100%
+                                @extend %flex-box
+                                .company-items
+                                    margin: 0 0 30px
+                                    padding: 20px 20px 40px
+                                    width: 100%
+                                    @extend %flex-box
+                                    transition: all .3s linear
+                                    box-shadow: 0 0 5px rgba(0, 0, 0, 0.05)
+                                    &:hover
+                                        box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05), 0 0 15px rgba(0, 0, 0, 0.05)
+                                    .company-items__link
+                                        padding: 15px
+                                        height: 215px
+                                        width: 37.777%
+                                        @extend %flex-box
+                                        flex-direction: column
+                                        flex-wrap: nowrap
+                                        justify-content: center
+                                        align-items: center
+                                        align-content: center
+                                        border: 1px solid #dedede
+                                        overflow: hidden
+                                        span
+                                            height: 100%
+                                            width: 100%
+                                            @extend %flex-box
+                                            flex-direction: column
+                                            flex-wrap: nowrap
+                                            justify-content: center
+                                            align-items: center
+                                            align-content: center
+                                            overflow: hidden
+                                            background-color: #fff
+                                            position: relative
+                                            &:after
+                                                padding: 50% 0
+                                                content: ''
+                                                height: 100%
+                                                width: 100%
+                                                text-align: center
+                                                font-weight: 700
+                                                font-size: 18px
+                                                line-height: 18px
+                                                color: $colorBlue
+                                                text-transform: uppercase
+                                                letter-spacing: 1px
+                                                position: absolute
+                                                top: 50%
+                                                transform: translateY(-50%)
+                                                left: 0
+                                                z-index: 0
+                                            img
+                                                height: 100%
+                                                width: 100%
+                                                object-fit: contain
+                                                position: relative
+                                                z-index: 2
+                                    .company-items__description
+                                        padding: 0 15px
+                                        width: 62.223%
+                                        .company-items__description-title
+                                            margin: 0 0 15px
+                                            padding: 0 0 15px
+                                            a
+                                                padding: 0 0 0 30px
+                                                width: auto
+                                                display: inline-block
+                                                position: relative
+                                                &:after
+                                                    content: ''
+                                                    height: 20px
+                                                    width: 20px
+                                                    background-size: cover
+                                                    position: absolute
+                                                    top: 4px
+                                                    left: 0
+                                                span, i
+                                                    width: auto
+                                                    display: inline
+                                                i
+                                                    position: absolute
+                                                    bottom: 5px
+                                                    right: 0
+                                                    transition: all .3s linear
+                                                    svg
+                                                        transition: all .3s linear
+                                                        height: 15px
+                                                        width: 15px
+                                                        color: #dedede
+                                                &:hover
+                                                    i svg
+                                                        color: $colorBlue
+                                                span
+                                                    padding: 0 30px 0 0
+                                                    height: 40px
+                                                    min-height: 40px
+                                                    overflow: hidden
+                                                    font: 300 18px/28px $fontErmilov
+                                                    color: $colorBlue
+                                                    text-transform: uppercase
+                                                    transition: all .3s linear
+                                                    position: relative
+                                            .machinery_engineering
+                                                &:after
+                                                    background: url($img_machinery_engineering) no-repeat center center
+                                            .food_beverages
+                                                &:after
+                                                    background: url($img_food_beverages) no-repeat center center
+                                            .i_c_t_hightech_innovations
+                                                &:after
+                                                    background: url($img_ict_high_tech_innovations) no-repeat center center
+                                            .education_tourism
+                                                &:after
+                                                    background: url($img_education_tourism) no-repeat center center
+                                            .creative_industries
+                                                &:after
+                                                    background: url($img_creative_industries) no-repeat center center
+                                            .state_enterprises
+                                                &:after
+                                                    background: url($img_state_enterprises) no-repeat center center
+                                            .other
+                                                &:after
+                                                    background: url($img_other) no-repeat center center
+                                        .company-items__description-content
+                                            padding: 0 0 15px
+                                            position: relative
+                                            a
+                                                font-weight: 400
+                                                font-size: 16px
+                                                line-height: 16px
+                                                color: $colorBlue
+                                                text-decoration: none
+                                                display: inline
+                                                position: absolute
+                                                right: 0
+                                                bottom: 0
+                                            div
+                                                height: 100px
+                                                min-height: 100px
+                                                overflow: hidden
+                                                font-weight: 400
+                                                font-size: 16px
+                                                line-height: 24px
+                                                color: #2d2926
+                                                position: relative
+                                                &:before
+                                                    content: ''
+                                                    height: 100%
+                                                    width: 100%
+                                                    background: linear-gradient(to bottom, rgba(255,255,255,0) 10%, rgba(255,255,255,1) 100%), linear-gradient(to bottom, rgba(255,255,255,0) 0, rgba(255,255,255,1) 100%)
+                                                    position: absolute
+                                                    bottom: 0
+                                                    left: 0
+                                        .company-items__description-content p
+                                            margin: 0 0 8px
+                                            font-weight: 400
+                                            font-size: 16px
+                                            line-height: 24px
+                                            color: #2d2926
+                                            a
+                                                font-weight: 400
+                                                font-size: 16px
+                                                line-height: 16px
+                                                color: $colorBlue
+                                                text-decoration: none
+                                                display: inline
+                            .all-more
+                                padding: 60px 0 15px
+                                width: 100%
+                                display: flex
+                                justify-content: center
+                                .all-more__link
+                                    @extend %all-more__link
+                &:last-child
+                    padding-left: 0
+                    .filter-exporters__item
+                        @import "../_item/filter-event-speakers"
+/* ---End Main style--- */
+
+/* ---Start icon-qr style--- */
+.qr-icons
+    display: flex
+    justify-content: flex-start
+    //justify-content: space-between
+    align-items: center
+    min-height: 72px
+    margin-right: 10px
+.icon-qr
+    background: url("/img/qrwechat.png") no-repeat center center
+    position: relative
+    height: 50px
+    width: 50px
+    cursor: pointer
+
+.icon-category-qr
+    height: 30px
+    width: 30px
+.icon-category-position
+    position: absolute
+    right: -5px
+    bottom: -5px
+
+.machinery_engineering-qr
+    background: url($img_machinery_engineering) no-repeat center center
+.food_beverages-qr
+    background: url($img_food_beverages) no-repeat center center
+.ict_high_tech_innovations-qr
+    background: url($img_ict_high_tech_innovations) no-repeat center center
+.education_tourism-qr
+    background: url($img_education_tourism) no-repeat center center
+.creative_industries-qr
+    background: url($img_creative_industries) no-repeat center center
+.state_enterprises-qr
+    background: url($img_state_enterprises) no-repeat center center
+.other-qr
+    background: url($img_other) no-repeat center center
+/* ---End icon-qr  style--- */
+

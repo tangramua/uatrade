@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:gedmo="http://gediminasm.org/schemas/orm/doctrine-extensions-mapping"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd"
+>
+    <entity name="Modules\Company\Entities\Doctrine\Company"
+            repository-class="Modules\Company\Repositories\Doctrine\CompanyRepository"
+            table="companies">
+
+        <id name="id" type="integer" column="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+
+        <field name="name" type="string" column="name" precision="0" scale="0" nullable="false"/>
+        <field name="displayName" type="string" column="display_name" precision="0" scale="0" nullable="false">
+            <gedmo:translatable/>
+        </field>
+        <field name="type" type="string" column="type" precision="0" scale="0" nullable="false" >
+            <options>
+                <option name="default">commercial</option>
+            </options>
+        </field>
+        <field name="logo" type="string" column="logo" precision="0" scale="0" nullable="true"/>
+        <field name="siteUrl" type="string" column="site_url" precision="0" scale="0" nullable="true"/>
+        <field name="established" type="integer" column="established" precision="0" scale="0" nullable="true"/>
+        <field name="employeesAmount" type="integer" column="employees_amount" precision="0" scale="0" nullable="true"/>
+        <field name="description" type="text" column="description" precision="0" scale="0" nullable="true">
+            <gedmo:translatable/>
+        </field>
+        <field name="video" type="string" column="video" precision="0" scale="0" nullable="true"/>
+        <field name="email" type="string" column="email" precision="0" scale="0" nullable="true"/>
+        <field name="wechatId" type="string" column="wechat_id" precision="0" scale="0" nullable="true"/>
+        <field name="wechatQrCode" type="string" column="wechat_qr_code" precision="0" scale="0" nullable="true"/>
+        <field name="productsDescription" type="text" column="products_description" precision="0" scale="0" nullable="true">
+            <gedmo:translatable/>
+        </field>
+        <field name="targetAudience" type="text" column="target_audience" precision="0" scale="0" nullable="true">
+            <gedmo:translatable/>
+        </field>
+        <field name="certifications" type="text" column="certifications" precision="0" scale="0" nullable="true"/>
+        <field name="exportingTo" type="text" column="exporting_to" precision="0" scale="0" nullable="true">
+            <gedmo:translatable/>
+        </field>
+
+        <many-to-many field="certificates" target-entity="Certificate" mapped-by="companies" on-delete="CASCADE" />
+
+        <field name="createdAt" type="datetime" column="created_at" precision="0" scale="0" nullable="false">
+            <gedmo:timestampable on="create"/>
+        </field>
+
+        <field name="updatedAt" type="datetime" column="updated_at" precision="0" scale="0" nullable="false">
+            <gedmo:timestampable on="update"/>
+        </field>
+
+        <many-to-many target-entity="Modules\GeoNames\Entities\Doctrine\Country" field="exportingCountries">
+            <join-table name="companies_has_exporting_countries">
+                <join-columns>
+                    <join-column name="company_id" referenced-column-name="id" on-delete="CASCADE" on-update="CASCADE"/>
+                </join-columns>
+                <inverse-join-columns>
+                    <join-column name="country_id" referenced-column-name="id" on-delete="CASCADE" on-update="CASCADE"/>
+                </inverse-join-columns>
+            </join-table>
+        </many-to-many>
+
+        <many-to-many target-entity="Category" field="categories">
+            <join-table name="companies_have_categories">
+                <join-columns>
+                    <join-column name="company_id" referenced-column-name="id" on-delete="CASCADE" on-update="CASCADE"/>
+                </join-columns>
+                <inverse-join-columns>
+                    <join-column name="category_id" referenced-column-name="id" on-delete="CASCADE" on-update="CASCADE"/>
+                </inverse-join-columns>
+            </join-table>
+        </many-to-many>
+
+        <one-to-one target-entity="Modules\Company\Entities\Doctrine\Address" field="address" inversed-by="company">
+            <join-column name="address_id" referenced-column-name="id" on-delete="SET NULL" on-update="CASCADE"/>
+            <cascade>
+                <cascade-all/>
+            </cascade>
+        </one-to-one>
+
+        <one-to-one target-entity="Modules\Location\Entities\Doctrine\Location" field="location" inversed-by="company">
+            <join-column name="location_id" referenced-column-name="id" on-delete="SET NULL" on-update="CASCADE"/>
+            <cascade>
+                <cascade-persist />
+                <cascade-merge />
+                <cascade-refresh />
+            </cascade>
+        </one-to-one>
+
+        <one-to-many field="project" target-entity="Project" mapped-by="company" />
+
+
+        <one-to-many target-entity="Product" field="products" mapped-by="company"/>
+        <one-to-many target-entity="Employee" field="employees" mapped-by="company"/>
+
+        <gedmo:translation entity="Modules\Core\Entities\Doctrine\Translation" locale="locale"/>
+
+        <lifecycle-callbacks>
+            <lifecycle-callback type="preUpdate" method="preUpdate"/>
+        </lifecycle-callbacks>
+
+    </entity>
+</doctrine-mapping>

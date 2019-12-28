@@ -1,0 +1,354 @@
+/* ---Begin filter event and speakers style--- */
+.filter-event-speakers
+    margin: 0
+    .banner-top__filter-content
+        padding: 20px 0 0
+        height: auto
+        width: 100%
+        .btn-group
+            margin: -20px 0 30px
+            width: 100%
+            @extend %flex-box
+            justify-content: flex-start
+            align-items: center
+            align-content: flex-start
+            position: relative
+            z-index: 10
+            .btn-ev
+                padding: 15px 35px
+                width: auto
+                background-color: transparent
+                color: $colorBlue
+                border: none
+                border-radius: 50px
+                font: 300 20px/20px $fontErmilov
+                outline: none
+                cursor: pointer
+            .btn-ev.active
+                background-color: $colorYellow
+                color: $colorBlue
+                box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05)
+        .filter-select
+            margin: 0 0 30px
+            position: relative
+            z-index: 10
+            .filter-date-time-select, .location-topic
+                @extend %flex-box
+                .filter-date-time-select__item, .location-topic__item
+                    width: 48%
+                    .day-name
+                        font: 300 12px/30px $fontErmilov
+                        color: #d2d2d2
+                    .select-date, .select-time
+                        @extend %flex-box
+                        font: 300 16px/30px $fontErmilov
+                        color: #2d2926
+                        cursor: pointer
+                        position: relative
+                        transition: all .3s linear
+                        &:after
+                            content: ''
+                            height: 2px
+                            width: 100%
+                            background-color: #2d2926
+                            position: absolute
+                            bottom: 0
+                            left: 0
+                            z-index: 1
+                        &:before
+                            content: ''
+                            height: 2px
+                            width: 0
+                            background-color: #fff
+                            transition: all .3s linear
+                            position: absolute
+                            bottom: 0
+                            left: 0
+                            z-index: 2
+                        &:hover
+                            &:before
+                                width: 100%
+                    .select-time
+                        padding: 30px 0 0
+            .location-topic
+                margin: 0 0 15px
+                padding: 15px 0 0
+                .location-topic__item
+                    .dropdown-toggle
+                        &:after
+                            border-top: none
+                        border: none
+                        &:before
+                            content: ''
+                            height: 2px
+                            width: 100%
+                            transition: all .3s linear
+                            background-color: #2d2926
+                            position: absolute
+                            bottom: 0
+                            right: 0
+                            z-index: 1
+                        &:hover
+                            &:before
+                                width: 0
+                        .vs__selected-options
+                            .selected-tag
+                                font: 300 16px/30px $fontErmilov
+                                color: #2d2926
+                        .vs__actions
+                            margin: 15px -10px 0 0
+                            padding: 0
+                            button
+                                span
+                                    margin: 6px 0 0
+                                    font-weight: 400
+                                    color: #2d2926
+                                    display: inline-block
+                            i
+                                &:before
+                                    transition: all .3s linear
+                                    border-color: #2d2926
+                                    border-style: solid
+                                    border-width: 2px 2px 0 0
+                                    content: ""
+                                    display: inline-block
+                                    height: 10px
+                                    width: 10px
+                .open
+                    .dropdown-toggle
+                        .vs__actions
+                            i
+                                &:before
+                                    margin: 8px 0 0 0
+                    .dropdown-menu
+                        margin: 0
+                        padding: 0
+                        display: block
+                        position: absolute
+                        top: 100%
+                        left: 0
+                        z-index: 1000
+                        min-width: 160px
+                        width: 97%
+                        overflow-y: scroll
+                        border: none
+                        box-shadow: none
+                        border-radius: 0
+                        text-align: left
+                        list-style: none
+                        background: #fff
+                        li a
+                            padding: 10px 15px
+                            transition: all .3s linear
+                            &:hover
+                                background-color: $colorBlue
+                        .active
+                            background-color: #f1f7fc
+        .filter-select-result
+            margin: 0 0 15px
+            padding: 24px 0
+            width: 100%
+            background-color: $colorBlue
+            @extend %flex-box
+            .filter-select-result__item
+                &:first-child
+                    padding: 0 0 0 24px
+                    width: 35%
+                    font: 300 28px/28px $fontErmilov
+                    color: #fae053
+                &:last-child
+                    width: 65%
+                    font-weight: 400
+                    font-size: 16px
+                    line-height: 28px
+                    color: #fff
+    .filter-event-result
+        padding: 0 0 1px
+        width: 100%
+        position: relative
+        .filter-event-result__item
+            margin: 0 0 60px
+            width: 100%
+            .filter-event-result__item-description
+                padding: 0 2px
+                height: auto
+                width: 100%
+                position: relative
+                &:after
+                    content: ''
+                    height: 16px
+                    width: 100%
+                    background: url("/img/top-shadow.jpg") no-repeat center center
+                    background-size: contain
+                    position: absolute
+                    top: 0
+                    left: 0
+                .item-description
+                    padding: 20px 15px
+                    height: auto
+                    width: 100%
+                    border-left: 2px solid rgba(0, 0, 0, .03)
+                    border-right: 2px solid rgba(0, 0, 0, .03)
+                    .item-description-title
+                        margin: 0 0 15px
+                        .item-description-title__link
+                            display: inline-block
+                            font: 300 16px/16px $fontErmilov
+                            color: $colorBlue
+                            transition: all .3s linear
+                            text-decoration: none
+                            position: relative
+                            &:after
+                                content: ''
+                                height: 1px
+                                width: 0
+                                transition: all .3s linear
+                                background-color: $colorBlue
+                                position: absolute
+                                bottom: 0
+                                left: 0
+                            &:hover
+                                &:after
+                                    width: 100%
+                    .item-description-info
+                        width: 100%
+                        @extend %flex-box
+                        .item-description-info__column
+                            width: 48%
+                            .item-description-info__column-title
+                                margin: 0 0 15px
+                                font: 300 13px/13px $fontErmilov
+                                color: #2d2926
+                            .item-description-info__column-opening
+                                margin: 0 0 15px
+                                font-weight: 400
+                                font-size: 12px
+                                line-height: 12px
+                                color: #818181
+                            .item-description-info__column-text
+                                font-weight: 400
+                                font-size: 12px
+                                line-height: 12px
+                                color: rgba(129, 129, 129, 0.6)
+                            .item-description-info__column-speakers
+                                font-weight: 400
+                                font-size: 12px
+                                line-height: 12px
+                                color: $colorBlue
+                                .item-description-info__column-speakers-link
+                                    display: inline-block
+                                    font-weight: 400
+                                    font-size: 12px
+                                    line-height: 12px
+                                    color: $colorBlue
+                                    text-decoration: none
+                            &:last-child
+                                .item-description-info__column-text
+                                    margin: 0 0 15px
+            .filter-event-result__item-place
+                width: 100%
+                position: relative
+                &:after
+                    content: ''
+                    height: 58px
+                    width: 100%
+                    background: url("/img/bottom-shadow.jpg") no-repeat top center
+                    background-size: contain
+                    position: absolute
+                    top: 0
+                    left: 0
+                .item-place
+                    padding: 15px 22px
+                    height: auto
+                    width: 100%
+                    @extend %flex-box
+                    justify-content: flex-start
+                    position: absolute
+                    top: 0
+                    right: 0
+                    bottom: 0
+                    left: 0
+                    z-index: 1
+                    .place-icon
+                        margin: 0 15px 0 0
+                        width: 15px
+                    .place-text
+                        font-weight: 400
+                        font-size: 12px
+                        line-height: 20px
+                        color: #818181
+                    .place-hall
+                        margin: 0 10px 0 0
+    .speakers-about__item
+        margin: 0 0 30px
+        transition: all .3s linear
+        box-shadow: 0 0 5px rgba(0, 0, 0, 0.05)
+        @extend %flex-box
+        .speakers-about-link
+            width: 30%
+            .speakers-about-img-thumbnail
+                width: 100%
+        .speakers-about-article
+            padding: 20px 24px 30px
+            width: 70%
+            background-color: #fff
+            .speakers-name, .speakers-name p
+                font-weight: 400
+                font-style: normal
+                font-size: 20px
+                line-height: 20px
+                color: #2d2926
+            .article-thumbnail, .article-thumbnail__title
+                width: 100%
+                .article-thumbnail__title
+                    margin: 0 0 15px
+                    .speakers-title__link
+                        @extend %flex-box
+                        font: 300 20px/20px $fontErmilov
+                        color: $colorBlue
+                        p, i
+                            width: auto
+                            display: inline-block
+                        p
+                            margin: 0
+                            font: 300 20px/20px $fontErmilov
+                            color: $colorBlue
+                        i
+                            margin: -4px 0 0
+                            height: auto
+                            svg
+                                height: 15px
+                                width: 15px
+                                color: #dedede
+                                transition: all .3s linear
+                    &:hover
+                        .speakers-title__link
+                            i svg
+                                color: $colorBlue
+                .article-thumbnail__content, .article-thumbnail__content p
+                    height: 120px
+                    min-height: 120px
+                    overflow: hidden
+                    font-weight: 400
+                    font-style: normal
+                    font-size: 16px
+                    line-height: 24px
+                    color: #2d2926
+
+        &:hover
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.05), 0 0 15px rgba(0, 0, 0, 0.05)
+    .all-more
+        padding: 0
+        width: 100%
+        position: relative
+        &:before
+            content: ''
+            height: 250px
+            width: 100%
+            background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 75%)
+            position: absolute
+            right: 0
+            top: -250px
+            left: 0
+            z-index: 9
+/* ---Begin filter event and speakers style--- */

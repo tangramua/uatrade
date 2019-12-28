@@ -1,0 +1,281 @@
+.header__item-nav
+    @extend %flex-box
+    align-items: center
+    .navbar.navbar-dark.bg-info.navbar-expand-md
+        padding: 0
+        width: 100%
+        @extend %flex-box
+        align-items: center
+        background-color: transparent !important
+        #nav_collapse
+            width: 80%
+            display: inline-block
+            .navbar-nav.navigation-menu
+                width: 90%
+                @extend %flex-box
+                align-items: center
+                .navigation-menu__item
+                    .nav-link.dropdown-toggle
+                        width: auto
+                        @extend %flex-box
+                        justify-content: space-between
+                        align-items: center
+                        &:after
+                            display: none
+                        figure
+                            margin: 0
+                            @extend %flex-box
+                            justify-content: space-between
+                            align-items: center
+                            position: relative
+                            /*img
+                                margin: 0 4px 0 0
+                                width: 200px
+                            .ukraine-now
+                                padding-right: 30px
+                                @extend %flex-box
+                                justify-content: space-between
+                                align-items: center
+                                span
+                                    width: auto
+                                    display: inline-block
+                                    &:first-child
+                                        margin: 0 -2px 0 0
+                                        font-size: 28px
+                                        line-height: 28px
+                                        background-color: #fff
+                                    &:last-child
+                                        padding: 5px 7px
+                                        font-size: 28px
+                                        line-height: 28px
+                                        text-transform: uppercase
+                                        background-color: $colorYellow
+                                        text-align: center
+                                        position: relative
+                                        i
+                                            height: 28px
+                                            width: 28px
+                                            position: absolute
+                                            top: -15px
+                                            right: -15px
+                            i.una-down
+                                padding: 15px 0 0
+                                color: #000
+                                font-size: 14px
+                                transition: all .3s ease
+                                position: absolute
+                                top: -3px
+                                right: 0
+                                svg
+                                    height: 12px
+                                    width: 14px
+                        &:hover
+                            &:before
+                                bottom: 7px
+                .nav-item.dropdown
+                    .dropdown-menu
+                        margin: 0
+                        padding: 0
+                        height: 0
+                        width: 100%
+                        display: table
+                        background: url("/img/menu-bg.jpg") no-repeat center right #fff
+                        background-size: 57.444% 100%
+                        visibility: hidden
+                        opacity: 0
+                        border-radius: 0
+                        border: none
+                        transition: all .3s linear
+                        position: fixed
+                        left: 0
+                        top: 160px
+                        right: 0
+                        z-index: -1 !important
+                        &:after
+                            content: ''
+                            height: 100%
+                            width: 100%
+                            box-shadow: inset 0 5px 15px rgba(0, 0, 0, 0.15), 0 5px 15px rgba(0, 0, 0, 0.15)
+                            position: absolute
+                            left: 0
+                            top: 0
+                            right: 0
+                            bottom: 0
+                        .container
+                            height: auto
+                            display: none
+                            .dropdown-menu-shadow
+                                padding: 30px 15px 30px 30px
+                                height: auto
+                                position: relative
+                                &:after
+                                    content: ''
+                                    height: 100%
+                                    width: 200px
+                                    display: none
+                                    background: linear-gradient(to left, rgba(255,255,255,0) 20%,rgba(255,255,255,1) 100%)
+                                    position: absolute
+                                    top: 0
+                                    right: -148px
+                                    z-index: 0
+                                .row, [class*='col-']
+                                    height: auto
+                                    [class*='col-']
+                                        @extend %flex-box
+                                        flex-direction: column
+                                        flex-wrap: nowrap
+                                        justify-content: space-between
+                                        align-items: flex-start
+                                        align-content: center
+                                        .drop-down-link
+                                            margin: 0 0 15px
+                                            display: inline-block
+                                            font: 300 20px/20px $fontErmilov
+                                            color: #2d2926
+                                            position: relative
+                                            z-index: 1
+                                            &:last-child
+                                                margin: 0
+                .nav-item.dropdown.show
+                    &:hover
+                        .nav-link
+                            color: $colorBlue
+                            &:before
+                                width: 100%
+                    .dropdown-menu.show
+                        height: 250px
+                        width: 100%
+                        display: table
+                        visibility: visible
+                        opacity: 1
+                        position: fixed
+                        left: 0
+                        top: 160px
+                        right: 0
+                        z-index: 0
+                        .container
+                            display: block
+                            .dropdown-menu-shadow
+                                &:after
+                                    display: inline-block
+                                .drop-down-link
+                                    @extend %clone-menu-top__item-link
+                                    text-align: left
+                                    position: relative
+                                    &:after
+                                        content: ''
+                                        height: 10px
+                                        width: 16px
+                                        display: inline-block
+                                        background: url("/img/dropdown-link-right-arrow-hover.svg") no-repeat left center
+                                        transition: all .3s linear
+                                        visibility: hidden
+                                        opacity: 0
+                                        position: absolute
+                                        left: -30px
+                                        top: 50%
+                                        transform: translateY(-50%)
+                                    &:hover
+                                        color: $colorBlue
+                                        background-color: transparent
+                                        &:after
+                                            visibility: visible
+                                            opacity: 1
+                .nav-item
+                    .nav-link
+                        @extend %navigation-menu__item-link
+                .navigation-menu__item
+                    margin: -4px 0 0
+                    .nav-link
+                        @extend %navigation-menu__item-link
+                        &:before
+                            bottom: 7px
+                        &:hover
+                            &:before
+                                bottom: 7px
+                .nav-item.dropdown.change-language,
+                .nav-item.dropdown.li-agenda
+                    margin: 0
+                    .nav-link
+                        margin: 0
+                        &:after
+                            display: none
+                        &:before
+                            bottom: 2px
+                        div
+                            i.lang-down
+                                padding: 15px 0 0
+                                color: #000
+                                font-size: 14px
+                                transition: all .3s ease
+                                svg
+                                    height: 12px
+                                    width: 14px
+                .nav-item.dropdown.change-language.dropdown-menu.show
+                    .dropdown-menu.show
+                        margin: auto
+                .nav-item.log-in-link,
+                .nav-item.log-out-link,
+                    .nav-link
+                        margin: -4px 0 0
+                        @extend %flex-box
+                        justify-content: space-between
+                        align-items: center
+                        span
+                            width: auto
+                            display: inline-block
+                            &:first-child
+                                padding: 7px 12px 7px 7px
+                                text-transform: uppercase
+                                background-color: $colorYellow
+                                text-align: center
+                                position: relative
+                            &:last-child
+                                background-color: #fff
+                                i
+                                    height: 24px
+                                    width: 24px
+                                    position: absolute
+                                    top: -5px
+                                    right: -15px
+                        &:before
+                            bottom: 6px
+                .nav-item.log-out-link
+                    margin: 0 -20px 0 0
+        a.navbar-brand.logo
+            margin: 0 -100px 0 0
+            padding: 0
+            width: 16.333%
+            transition: all .3s linear
+
+.dropdown-item.active, .dropdown-item:active, .nav-link.active
+    background-color: transparent !important
+    @extend %clone-menu-top__item-link
+    text-align: left
+    color: $colorBlue !important
+    position: relative !important
+    &:before
+        width: 100%
+.dropdown-menu.show
+    .container
+        .dropdown-menu-shadow
+            .row
+                .col-md-8
+                    .dropdown-item.drop-down-link.active
+                        &:after
+                            content: ''
+                            height: 10px
+                            width: 16px
+                            display: inline-block
+                            background: url("/img/dropdown-link-right-arrow-hover.svg") no-repeat left center
+                            transition: all .3s linear
+                            visibility: visible !important
+                            opacity: 1 !important
+                            position: absolute
+                            left: -30px
+                            top: 50%
+                            transform: translateY(-50%)
+.dropdown-item:hover, .dropdown-item:focus
+    background-color: transparent
+.change-language.nav-item.b-nav-dropdown.dropdown
+    margin: 0 30px !important

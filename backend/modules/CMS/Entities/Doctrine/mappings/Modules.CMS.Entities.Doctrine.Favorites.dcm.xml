@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping"
+                  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+                  xmlns:gedmo="http://gediminasm.org/schemas/orm/doctrine-extensions-mapping"
+                  xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd"
+>
+    <entity name="Modules\CMS\Entities\Doctrine\Favorites" repository-class="Modules\CMS\Repositories\Doctrine\FavoritesRepository" table="favorites">
+
+        <unique-constraints>
+            <unique-constraint columns="user_id,object_alias,foreign_key" name="unique_data" />
+        </unique-constraints>
+
+        <id name="id" type="integer" column="id">
+            <generator strategy="IDENTITY"/>
+        </id>
+
+        <many-to-one target-entity="Modules\User\Entities\Doctrine\User" field="user">
+            <join-column name="user_id" referenced-column-name="id" on-delete="CASCADE" on-update="CASCADE" nullable="false"/>
+        </many-to-one>
+
+        <field name="objectAlias" type="string" column="object_alias" precision="0" scale="0" nullable="false"/>
+        <field name="foreignKey" type="string" column="foreign_key" precision="0" scale="0" nullable="false"/>
+
+        <lifecycle-callbacks>
+            <lifecycle-callback type="preUpdate" method="preUpdate"/>
+        </lifecycle-callbacks>
+
+    </entity>
+</doctrine-mapping>

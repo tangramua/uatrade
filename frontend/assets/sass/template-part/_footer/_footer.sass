@@ -1,0 +1,132 @@
+/* ---Begin Footer style--- */
+.footer
+    padding: 30px 0
+    width: 100%
+    background-color: $colorBlue
+    .footer__item
+        @extend %flex-box
+        justify-content: space-between
+        align-items: center
+        align-content: flex-start
+        .footer__item-columns
+            &:nth-of-type(1)
+                width: 17.444%
+                .logo
+                    width: 100%
+                    display: inline-block
+                    .logo__item
+                        width: 100%
+                        display: inline-block
+        .footer__item-columns-group
+            &:last-child
+                width: 70%
+                @extend %flex-box
+                justify-content: space-between
+                align-items: flex-start
+                align-content: flex-start
+                .footer__item-columns
+                    &:nth-of-type(1), &:nth-of-type(2), &:nth-of-type(3)
+                        @extend %min-height-columns
+                        width: 50%
+                        .clone-menu-top
+                            margin: 0
+                            padding: 0 30px
+                            @extend %min-height-columns
+                            width: 100%
+                            list-style: none
+                            display: table
+                            border-left: 1px solid #fff
+                            .clone-menu-top__item
+                                margin: 0 0 8px
+                                padding: 0
+                                background-color: transparent
+                                border: none
+                                .clone-menu-top__item-link
+                                    padding: 8px 0
+                                    @extend %clone-menu-top__item-link
+                    /*&:nth-of-type(2)
+                        width: 20%
+                    &:nth-of-type(3)
+                        @extend %min-height-columns
+                        width: 44%
+                        text-align: right
+                        .subscribe-form
+                            @extend %min-height-columns
+                            width: 100%
+                            @extend %flex-box
+                            flex-direction: column
+                            justify-content: flex-start
+                            align-items: flex-start
+                            align-content: flex-start
+                            .entry-title
+                                margin: 0 0 60px
+                                padding: 0 25% 0 0
+                                width: 100%
+                                text-align: right
+                                h4
+                                    margin: 0 0 8px
+                                    font: 300 32px/32px $fontErmilov
+                                    color: #fff
+                                p
+                                    margin: 0
+                                    font-weight: 400
+                                    font-size: 14px
+                                    line-height: 14px
+                                    color: #fff
+                            .subscribe-form__item
+                                width: 100%
+                                @extend %flex-box
+                                justify-content: space-between
+                                align-items: center
+                                align-content: flex-start
+                                position: relative
+                                border-radius: 50px
+                                box-shadow: 0 5px 10px rgba(0,0,0,.15)
+                                overflow: hidden
+                                .subscribe-form__item-label
+                                    margin: 0
+                                    &:first-child
+                                        width: 75%
+                                        .input-item.input-subscribe
+                                            margin: 0
+                                            height: 50px
+                                            width: 100%
+                                            border: none
+                                            outline: none
+                                            @extend %input-home-item
+                                            box-sizing: border-box
+                                    &:last-child
+                                        width: 40.333%
+                                        position: absolute
+                                        top: 50%
+                                        transform: translateY(-50%)
+                                        right: 0
+                                        .btn-item.btn-subscribe
+                                            @extend %btn-subscribe
+                                            height: 64px
+                                            border: 6px solid $colorBlue
+                                            border-right: none
+.sub-footer
+    padding: 8px 0
+    width: 100%
+    background-color: #fff
+    .sub-footer__item
+        width: 100%
+        .container
+            .row [class*='col-']
+                @extend %flex-box
+                flex-direction: column
+                flex-wrap: nowrap
+                justify-content: center
+                align-items: center
+                align-content: center
+        .caption-columns
+            .entry-title
+                padding: 0 50px
+                width: 100%
+                text-align: center
+                h5
+                    margin: 0
+                    font: 700 12px/24px $fontMontserrat
+                    color: $colorBlack
+/* ---End Footer style--- */

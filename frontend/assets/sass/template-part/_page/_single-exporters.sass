@@ -1,0 +1,467 @@
+/* ---Begin Main style--- */
+@import "../../variable/background"
+@import "../../template-part/_item/banner-top-single-exporters"
+.single-exporters
+    .section-our-booth
+        padding: 110px 0 42px
+        .row
+            [class*='col-']
+                &:first-child
+                    .entry-title
+                        padding: 0
+                        @extend %entry-title-second-two
+                        h2
+                            font: 300 48px/48px $fontErmilov
+                            color: #2d2926
+                            text-align: left
+                    .item-place
+                        margin: 0 0 15px
+                        @extend %flex-box
+                        justify-content: flex-start
+                        align-items: center
+                        .place-icon
+                            margin: 0 15px 0 0
+                            height: 26px
+                            width: 22px
+                        .place-text
+                            font-weight: 400
+                            font-size: 28px
+                            line-height: 28px
+                            color: $colorBlue
+                    .event-exposition
+                        margin: 0 0 15px
+                        padding: 0 0 0 35px
+                        @extend %flex-box
+                        justify-content: flex-start
+                        align-items: center
+                        .event-exposition__item
+                            .event-exposition__item-date, .event-exposition__item-year,
+                            .event-exposition__item-time-from, .event-exposition__item-time-before, span
+                                font-weight: 400
+                                font-size: 16px
+                                line-height: 16px
+                                color: #2d2d2d
+                            &:first-child
+                                margin: 0 15px 0 0
+                    .main-booth
+                        margin: 0 0 15px
+                        padding: 0 0 0 35px
+                        .main-booth__item
+                            font-weight: 400
+                            font-size: 14px
+                            line-height: 16px
+                            color: #d2d2d2
+
+                &:last-child
+                    .section-our-booth__item
+                        .place-hall-map
+                            height: auto
+                            min-height: 310px
+                            width: 100%
+                            border: 1px solid #d2d2d2
+
+    .section-company-profile
+        .entry-title
+            @extend %entry-title-second-two
+            h2
+                font-size: 48px
+                line-height: 48px
+        .section-company-profile__item
+            .row
+                &:first-child
+                    margin: 0
+                    [class*='col-']
+                        .company-est-employ-web
+                            margin: 0 0 30px
+                            padding: 27px 30px
+                            background-color: $colorYellow
+                            @extend %flex-box
+                            flex-direction: column
+                            justify-content: center
+                            align-items: center
+                            align-content: center
+                            .company-est-employ-web__item
+                                width: 100%
+                                @extend %flex-box
+                                justify-content: center
+                                align-items: center
+                                align-content: center
+                                .company-est-employ-web__link p
+                                    margin: 0
+                                .company-est-employ-web__link
+                                    width: 100%
+                                    @extend %flex-box
+                                    justify-content: space-between
+                                    align-items: flex-start
+                                    align-content: flex-start
+                            .company-est-employ-web__item
+                                &:first-child
+                                    margin: 0 0 15px
+                                    font: 300 22px/22px $fontErmilov
+                                    color: $colorBlue
+                                    .company-est-employ-web__link
+                                        font: 300 22px/22px $fontErmilov
+                                        color: $colorBlue
+                                        position: relative
+                                        p
+                                            font: 300 22px/22px $fontErmilov
+                                            color: $colorBlue
+                                        i
+                                            position: relative
+                                            top: -2px
+                                            svg
+                                                height: 15px
+                                                width: 15px
+                                        &:focus
+                                            color: $colorBlue
+                                        &:after
+                                            content: ''
+                                            height: 2px
+                                            width: 100%
+                                            background-color: $colorBlue
+                                            transition: all .3s linear
+                                            position: absolute
+                                            bottom: 0
+                                            right: 0
+                                        &:hover
+                                            &:after
+                                                width: 0
+                                &:last-child
+                                    font: 500 22px/22px 'Montserrat', sans-serif
+                                    color: #2d2d2d
+
+                &:last-child
+                    margin: 0
+                    [class*='col-']
+                        &:first-child
+                            .company-profile-info
+                                margin: 0
+                                .entry-title
+                                    margin: 0 0 30px
+                                    padding: 0 0 10px
+                                    border-bottom: 2px solid $colorYellow
+                                    @extend %entry-title-second-three
+                                    h3
+                                        font: 300 22px/22px $fontErmilov
+                                        color: $colorBlue
+                                        text-align: left
+                                        text-transform: uppercase
+                                .profile-info
+                                    margin: 0 0 30px
+                                    ul
+                                        padding: 0 0 0 30px
+                                        li
+                                            margin: 0 0 15px
+                                            font-weight: 400
+                                            font-size: 16px
+                                            line-height: 24px
+                                            color: #2d2d2d
+                                            p
+                                                font-weight: 400
+                                                font-size: 16px
+                                                line-height: 24px
+                                                color: #2d2d2d
+                        &:last-child
+                            margin: 0
+                            .company-profile-info
+                                .company-profile-info__photo-manager
+                                    @extend %flex-box
+                                    flex-direction: column
+                                    flex-wrap: nowrap
+                                    justify-content: flex-start
+                                    align-items: flex-start
+                                    align-content: flex-start
+                                    .company-profile-info__photo-manager-img
+                                        margin: 0 0 15px
+                                        height: 370px
+                                        width: 100%
+                                        @extend %flex-box
+                                        flex-direction: column
+                                        flex-wrap: nowrap
+                                        justify-content: center
+                                        align-items: center
+                                        align-content: center
+                                        overflow: hidden
+                                        span
+                                            height: 100%
+                                            width: 100%
+                                            @extend %flex-box
+                                            flex-direction: column
+                                            flex-wrap: nowrap
+                                            justify-content: center
+                                            align-items: center
+                                            align-content: center
+                                            overflow: hidden
+                                            background-color: #fff
+                                            position: relative
+                                            &:after
+                                                padding: 50% 0
+                                                content: ''
+                                                height: 100%
+                                                width: 100%
+                                                text-align: center
+                                                font-weight: 700
+                                                font-size: 18px
+                                                line-height: 18px
+                                                color: $colorBlue
+                                                text-transform: uppercase
+                                                letter-spacing: 1px
+                                                position: absolute
+                                                top: 50%
+                                                transform: translateY(-50%)
+                                                left: 0
+                                                z-index: 0
+                                            img
+                                                height: 100%
+                                                width: 100%
+                                                object-fit: contain
+                                                position: relative
+                                                z-index: 2
+                                    .company-profile-info__photo-manager-desc
+                                        padding: 0 24px 24px
+                                        .photo-manager-desc__link
+                                            margin: 0 0 15px
+                                            display: inline-block
+                                            font: 300 28px/28px $fontErmilov
+                                            color: $colorBlue
+                                        .photo-manager-desc__positions
+                                            font-weight: 400
+                                            font-size: 14px
+                                            line-height: 14px
+                                            color: #d2d2d2
+    @import "../_item/flags"
+    .certifications-exporting
+        .entry-title
+            margin: 0 0 30px
+            padding: 0 0 10px
+            border-bottom: 2px solid $colorYellow
+            @extend %entry-title-second-three
+            h3
+                font: 300 22px/22px $fontErmilov
+                color: $colorBlue
+                text-align: left
+                text-transform: uppercase
+        .certifications-exporting__certifications, .certifications-exporting__already-exporting
+            ul
+                padding: 0 0 0 30px
+                li
+                    margin: 0 0 15px
+                    font-weight: 400
+                    font-size: 12px
+                    line-height: 1.2
+                    color: #2d2d2d
+                    p
+                        font-weight: 400
+                        font-size: 12px
+                        line-height: 1.2
+                        color: #2d2d2d
+        .certifications-exporting__already-exporting
+            .certifications-exporting__already-exporting__item
+                padding: 0
+                width: 100%
+                list-style: none
+                column-count: 3
+                columns: 3
+                li
+                    width: auto
+                    display: inline-block
+                    vertical-align: middle
+                    span
+                        vertical-align: middle
+                    .flag
+                        margin: 0 8px 0 0
+                        position: relative
+                        &:after
+                            content: ''
+                            height: 28px
+                            width: 28px
+                            border-radius: 50px
+                            border: 6px solid #fff
+                            position: absolute
+                            top: 50%
+                            left: 50%
+                            transform: translate(-50%, -50%)
+                    .flag-country
+                        width: 70%
+                        text-transform: uppercase
+    .video-bg
+        padding: 50px 0
+        height: auto
+        width: 100%
+        background: url("/img/small-blue-bg.jpg") repeat
+    .section-for-video
+        width: 100%
+        .container
+            .row
+                [class*='col-']
+                    &:first-child
+                        .section-for-video__item
+                            width: 100%
+                            .entry-title
+                                padding: 60px 0 0
+                                @extend %entry-title-second-two
+                                h2
+                                    margin: 0 0 30px
+                                    font: 300 48px/48px $fontErmilov
+                                    color: #fff
+                                .sub-title
+                                    color: #fff
+                                    text-align: center
+                    &:last-child
+                        .section-for-video__item
+                            width: 100%
+                            .video
+                                height: 321px
+                                width: 100%
+                                background-color: #000
+                                position: relative
+                                .btn-group
+                                    height: 70px
+                                    width: 70px
+                                    position: absolute
+                                    top: 50%
+                                    left: -35px
+                                    transform: translateY(-50%)
+                                    z-index: 9
+                                    .btn-video
+                                        height: 100%
+                                        width: 100%
+                                        background-color: $colorBlue
+                                        border-radius: 50px
+                                        border: 8px solid $colorBlue
+                                        cursor: pointer
+                                        position: absolute
+                                        outline: none
+                                        top: 0
+                                        left: 0
+                                        &:before
+                                            content: ''
+                                            height: 100%
+                                            width: 100%
+                                            border: 4px solid $colorYellow
+                                            border-radius: 50px
+                                            position: absolute
+                                            left: 0
+                                            top: 0
+                                            z-index: 99
+                                    .play
+                                        &:after
+                                            content: ''
+                                            height: 0
+                                            width: 100%
+                                            border-top: 13px solid transparent
+                                            border-left: 16px solid $colorYellow
+                                            border-bottom: 13px solid transparent
+                                            position: absolute
+                                            left: 20px
+                                            top: 50%
+                                            transform: translateY(-50%)
+                                    .stop
+                                        &:after
+                                            content: ''
+                                            height: 20px
+                                            width: 20px
+                                            background-color: $colorYellow
+                                            position: absolute
+                                            left: 50%
+                                            top: 50%
+                                            transform: translate(-50%, -50%)
+                                .video__item
+                                    height: 100%
+                                    width: 100%
+                                    overflow: hidden
+                                    position: absolute
+                                    left: 0
+                                    top: 0
+                                    right: 0
+                                    bottom: 0
+                                    source, iframe
+                                        height: auto
+                                        width: auto
+                                        min-height: 100%
+                                        min-width: 100%
+                                        position: absolute
+                                        left: 0
+                                        top: 0
+                                        right: 0
+                                        bottom: 0
+    .section-exporters-contact
+        padding-bottom: 100px
+        width: 100%
+        .container
+            .entry-title
+                padding: 0
+                @extend %entry-title-second-two
+                h2
+                    font-size: 48px
+                    line-height: 48px
+                    text-transform: uppercase
+                    text-align: left
+            .row
+                [class*='col-']
+                    .exporters-contact
+                        .entry-title
+                            margin: 0 0 30px
+                            padding: 0 0 14px
+                            border-bottom: 2px solid $colorYellow
+                            @extend %entry-title-second-three
+                            h3
+                                font-size: 24px
+                                line-height: 24px
+                                color: $colorBlue
+                                text-transform: uppercase
+                                text-align: left
+                        .exporters-contact__item
+                            width: 100%
+                            .exporters-contact__item-address
+                                margin: 0 0 8px
+                                width: 100%
+                                font-weight: 400
+                                font-size: 16px
+                                line-height: 24px
+                                color: #818181
+                            .exporters-contact__item-website, .exporters-contact__item-mail,
+                            .exporters-contact__item-wechat
+                                width: 100%
+                                .exporters-contact__item-website-link,
+                                .exporters-contact__item-mail-link,
+                                .exporters-contact__item-wechat-link
+                                    display: inline-block
+                                    font: 300 14px/14px $fontErmilov
+                                    color: $colorBlue
+                                    text-decoration: none
+                                    position: relative
+                                    &:after
+                                        content: ''
+                                        height: 1px
+                                        width: 100%
+                                        background-color: $colorBlue
+                                        transition: all .3s linear
+                                        position: absolute
+                                        bottom: 0
+                                        right: 0
+                                .exporters-contact__item-mail-link
+                                    text-transform: uppercase
+                                .exporters-contact__item-website-link,
+                                .exporters-contact__item-mail-link,
+                                .exporters-contact__item-wechat-link
+                                    &:hover
+                                        &:after
+                                            content: ''
+                                            height: 1px
+                                            width: 0
+                                            background-color: $colorBlue
+                                            position: absolute
+                                            bottom: 0
+                                            right: 0
+.section-company-profile__item
+    .row [class*='col-']
+        &:last-child
+            .company-est-employ-web .company-est-employ-web__item
+                @extend %flex-box
+                justify-content: space-between !important
+                a, i
+                    width: auto !important
+                    display: inline-block !important
+
+/* ---End Main style--- */

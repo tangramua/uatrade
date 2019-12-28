@@ -1,0 +1,271 @@
+/* ---Begin speakers style--- */
+@import "../../variable/background"
+@import "../../template-part/_item/banner-top-events"
+.speakers
+    .section-speakers-single
+        width: 100%
+        .container
+            .entry-title
+                margin: 0 0 60px
+                padding: 0
+                box-shadow: none
+                background-color: transparent
+                text-align: center
+                @extend %entry-title
+                h1
+                    font-size: 50px
+                    line-height: 50px
+                    color: $colorBlue
+            .search-name
+                text-align: center
+                .search-form
+                    margin: 0 0 30px
+                    width: 100%
+                    @extend %flex-box
+                    justify-content: space-between
+                    align-items: center
+                    position: relative
+                    .search-form__item-label
+                        margin: 0
+                        .input-item
+                            height: 50px
+                            width: 100%
+                            border: none
+                            outline: none
+                        &:first-child
+                            width: 95%
+                            .input-item
+                                @extend %input-home-item
+                                border: 6px solid $colorBlue
+                                &:focus
+                                    box-shadow: none
+                        &:last-child
+                            width: 9.333%
+                            display: inline-block
+                            position: absolute
+                            top: -4px
+                            right: 15px
+                            .search-btn
+                                height: 60px
+                                width: 60px
+                                display: inline-block
+                                background: url( $Front-Dev__search_btn ) no-repeat center center $colorYellow
+                                background-size: 75% 75%
+                                border-radius: 50px
+                                border: 6px solid $colorBlue
+                                outline: none
+                                overflow: hidden
+                                cursor: pointer
+            @import "../_item/filter-event-speakers"
+            .filter-event-speakers
+                margin: 0 0 60px
+                .banner-top__filter-content
+                    .filter-select
+                        @extend %flex-box
+                        .filter-date-time-select, .location-topic
+                            width: 48%
+                        .location-topic
+                            margin: 0
+                            padding: 12px 0 0
+                .filter-event-result
+                    .filter-event-result__item
+                        .filter-event-result__item-description
+                            &:after
+                                height: 20px
+                        .filter-event-result__item-place
+                            &:after
+                                height: 65px
+                            .item-place
+                                padding: 24px 22px
+            .speakers-single-about
+                .speakers-single-about__item
+                    margin: 0 0 30px
+                    padding: 0 0 30px
+                    width: 100%
+                    border-bottom: 1px dashed rgba(45, 41, 38, 0.25)
+                    &:last-child
+                        border-bottom: none
+                        padding: 0
+                    .row [class*='col-']
+                        &:first-child
+                            .speakers-single-about__thumbnail
+                                height: 345px
+                                width: 100%
+                                .speakers-single-about__thumbnail-images
+                                    height: 100%
+                                    width: 100%
+                                    position: relative
+                                    img
+                                        height: 100%
+                                        width: 100%
+                                        object-fit: cover
+                                        position: absolute
+                                        left: 0
+                                        top: 0
+                                        right: 0
+                                        bottom: 0
+                        &:last-child
+                            .speakers-single-about__article
+                                padding: 10px 0 0
+                                width: 100%
+                                .speakers-single-about__article-name, .speakers-single-about__article-title
+                                    margin: 0 0 15px
+                                .speakers-single-about__article-name
+                                    padding: 15px
+                                    background-color: $colorBlue
+                                    font: 700 30px/30px $fontMontserrat
+                                    color: #fff
+                                    text-transform: uppercase
+                                    position: relative
+                                    &:before
+                                        content: ''
+                                        width: 0
+                                        height: 0
+                                        border-top: 30px solid transparent
+                                        border-right: 30px solid $colorBlue
+                                        border-bottom: 30px solid transparent
+                                        position: absolute
+                                        top: 0
+                                        left: -30px
+                                    &:after
+                                        content: ''
+                                        width: 0
+                                        height: 0
+                                        border-top: 30px solid transparent
+                                        border-right: 30px solid #fff
+                                        border-bottom: 30px solid transparent
+                                        position: absolute
+                                        top: 0
+                                        right: 0
+                                .speakers-single-about__article-title, .speakers-single-about__article-content
+                                    padding: 0 15px 15px
+                                .speakers-single-about__article-title
+                                    font: 700 16px/24px $fontMontserrat
+                                    color: $colorBlack
+                                    border-bottom: 3px solid $colorYellow
+                                    p
+                                        font: 700 16px/24px $fontMontserrat
+                                        color: $colorBlack
+                                        &:last-child
+                                            margin: 0
+                                .speakers-single-about__article-content, .speakers-single-about__article-content p
+                                    font: 500 16px/24px $fontMontserrat
+                                    color: $colorBlack
+                                    p
+                                        &:last-child
+                                            margin: 0
+                                .speakers-single-about__article-content
+                                    .filter-event-result__item
+                                        margin: 0 0 60px
+                                        width: 100%
+                                        .filter-event-result__item-description
+                                            padding: 0 2px
+                                            height: auto
+                                            width: 100%
+                                            position: relative
+                                            &:after
+                                                content: ''
+                                                height: 25px
+                                                width: 100%
+                                                background: url("/img/top-shadow.jpg") no-repeat center center
+                                                background-size: contain
+                                                position: absolute
+                                                top: 0
+                                                left: 0
+                                            .item-description
+                                                padding: 30px 15px
+                                                height: auto
+                                                width: 100%
+                                                border-left: 2px solid rgba(0, 0, 0, .03)
+                                                border-right: 2px solid rgba(0, 0, 0, .03)
+                                                .item-description-title
+                                                    margin: 0 0 15px
+                                                    .item-description-title__link
+                                                        display: inline-block
+                                                        font: 300 16px/16px $fontErmilov
+                                                        color: $colorBlue
+                                                        transition: all .3s linear
+                                                        text-decoration: none
+                                                        position: relative
+                                                        &:after
+                                                            content: ''
+                                                            height: 1px
+                                                            width: 0
+                                                            transition: all .3s linear
+                                                            background-color: $colorBlue
+                                                            position: absolute
+                                                            bottom: 0
+                                                            left: 0
+                                                        &:hover
+                                                            &:after
+                                                                width: 100%
+                                                .item-description-info
+                                                    width: 100%
+                                                    @extend %flex-box
+                                                    .item-description-info__column
+                                                        width: 48%
+                                                        .item-description-info__column-title
+                                                            margin: 0 0 15px
+                                                            font: 300 13px/13px $fontErmilov
+                                                            color: #2d2926
+                                                        .item-description-info__column-opening
+                                                            margin: 0 0 15px
+                                                            font-weight: 500
+                                                            font-size: 12px
+                                                            line-height: 12px
+                                                            color: #818181
+                                                        .item-description-info__column-text
+                                                            font-weight: 500
+                                                            font-size: 12px
+                                                            line-height: 12px
+                                                            color: rgba(129, 129, 129, 0.6)
+                                                        .item-description-info__column-speakers
+                                                            font-weight: 500
+                                                            font-size: 12px
+                                                            line-height: 12px
+                                                            color: $colorBlue
+                                                            .item-description-info__column-speakers-link
+                                                                display: inline-block
+                                                                font-weight: 500
+                                                                font-size: 12px
+                                                                line-height: 12px
+                                                                color: $colorBlue
+                                                                text-decoration: none
+                                                        &:last-child
+                                                            .item-description-info__column-text
+                                                                margin: 0 0 15px
+                                        .filter-event-result__item-place
+                                            width: 100%
+                                            position: relative
+                                            &:after
+                                                content: ''
+                                                height: 100px
+                                                width: 100%
+                                                background: url("/img/bottom-shadow.jpg") no-repeat top center
+                                                background-size: contain
+                                                position: absolute
+                                                top: 0
+                                                left: 0
+                                            .item-place
+                                                padding: 35px 25px
+                                                height: auto
+                                                width: 100%
+                                                @extend %flex-box
+                                                justify-content: flex-start
+                                                position: absolute
+                                                top: 0
+                                                right: 0
+                                                bottom: 0
+                                                left: 0
+                                                z-index: 1
+                                                .place-icon
+                                                    margin: 0 15px 0 0
+                                                    width: 15px
+                                                .place-text
+                                                    font-weight: 500
+                                                    font-size: 12px
+                                                    line-height: 20px
+                                                    color: #818181
+                                                .place-hall
+                                                    margin: 0 10px 0 0
+/* ---End speakers style--- */

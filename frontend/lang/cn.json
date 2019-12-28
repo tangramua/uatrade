@@ -1,0 +1,97 @@
+{
+  "footer": {
+    "link": {
+      "ukraine_now_ua": "今日乌克兰",
+      "introduction": "介绍",
+      "trade_and_export": "贸易与出口",
+      "governmental_institutions": "政府机构",
+      "trade_support_agencies": "贸易支持机构",
+      "agenda": "参展日程",
+      "massmedia": "大众媒体",
+      "contacts": "联系方式"
+    },
+    "button": {
+      "subscribe": "Subscribe"
+    },
+    "news_service": "News Service",
+    "to_get_interesting_offers_and_news_first": "To get interesting offers and news first",
+    "bottom_center_text": "The Programme is implemented by the Export Promotion Office, supported by the EBRD and funded under the EU4Business Initiative",
+    "subscribe_input_placeholder": "E-mail"
+  },
+
+  "buttons": {
+    "load_more_btn": "Show more",
+    "event_btn": "Event",
+    "speaker_btn": "Speaker"
+  },
+  "exporters" : "出口商",
+  "machinery_and_engineering" : "机械与工程",
+  "food_and_beverages" : "食品和饮料",
+  "high-tech_innovations" : "信息通信技术/高科技/创新",
+  "education_tourism" : "教育和旅游",
+  "creative_industries" : "创意产业",
+  "state_enterprises" : "国营企业",
+  "investment_projects" : "投资项目",
+  "testimonials" : "客户留言板",
+  "map_of_grounds" : "Map of Grounds",
+  "events" : "Events",
+  "speakers" : "Speakers",
+
+  "ukrainian_exporters": "Ukrainian exporters",
+  "more": "More",
+  "search_placeholder": "Enter keyword...",
+
+  "user_type": "User type",
+
+  "subscribe_to_event": "Subscribe to event",
+  "accepted_modal_text_label": "Rules",
+  "accepted_modal_checkbox_label": "Accept",
+
+  "test": "TEST_EN",
+  "ok": "Ok",
+  "cancel": "Cancel",
+  "error_alert_title": "Oops...",
+  "error_alert_text": "Something went wrong! Please try again.",
+  "token_expired_alert_title": "Session Expired!",
+  "token_expired_alert_text": "Please log in again to continue.",
+  "login": "Log In",
+  "register": "Register",
+  "page_not_found": "Page Not Found",
+  "go_home": "Go Home",
+  "logout": "Log Out",
+  "email": "Email",
+  "remember_me": "Remember Me",
+  "password": "Password",
+  "forgot_password": "Forgot Your Password?",
+  "confirm_password": "Confirm Password",
+  "username": "Username",
+  "first_name": "First name",
+  "last_name": "Last name",
+  "name": "Name",
+  "account": "Account",
+  "toggle_navigation": "Toggle navigation",
+  "home": "Home",
+  "you_are_logged_in": "You are logged in!",
+  "reset_password": "Reset Password",
+  "send_password_reset_link": "Send Password Reset Link",
+  "settings": "Settings",
+  "profile": "Profile",
+  "update": "Update",
+  "your_password": "Your Password",
+  "password_updated": "Your password has been updated!",
+  "new_password": "New Password",
+  "participant": "Participant",
+  "exporter": "Exporter",
+  "company": "Company",
+  "message": "Message",
+
+
+  "trade_and_export": "Trade & Export",
+  "trade_support_agencies": "Trade support agencies",
+  "fifty_inventions_of_ukraine": "50 inventions of Ukraine",
+  "discover_ukraine": "Discover Ukraine",
+  "tourism_in_ukraine": "Tourism in Ukraine",
+  "creative_industries": "Creative Industries",
+
+  "wechat": "微信"
+}

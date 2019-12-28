@@ -1,0 +1,205 @@
+/* ---Begin article style--- */
+@import "../../variable/background"
+@import "../../template-part/_item/banner-top-events"
+.section-article
+    .container
+        .entry-title
+            margin: 0 0 60px
+            @extend %entry-title
+            padding: 0
+            text-align: center
+            box-shadow: none
+            background-color: transparent
+            h1
+                padding: 0 0 15px
+                display: inline-block
+                font-size: 50px
+                line-height: 50px
+                color: $colorBlue
+                position: relative
+                &:before
+                    content: ''
+                    height: 6px
+                    width: 400%
+                    background-color: $colorYellow
+                    position: absolute
+                    right: 0
+                    bottom: 0
+        .article
+            width: 100%
+            text-align: justify
+            h1, h2, h3, h4, h5, h6, img
+                margin: 0 0 15px
+            img
+                height: auto
+                width: 100%
+                display: block
+            span
+                display: block
+                position: relative
+                img
+                    height: auto
+                    width: 100%
+                    display: block
+                &:after
+                    content: ''
+                    height: 95%
+                    width: 95%
+                    display: inline-block
+                    border: 12px solid rgba(0, 114, 206, 0.50)
+                    position: absolute
+                    left: 50%
+                    top: 50%
+                    transform: translate(-50%, -50%)
+            h1
+                width: auto
+                display: inline-block
+                font: 300 50px/50px $fontErmilov
+                color: $colorBlue
+            h2
+                width: auto
+                display: inline-block
+                font: 300 45px/45px $fontErmilov
+                color: $colorBlue
+            h3
+                width: auto
+                display: inline-block
+                font: 300 40px/40px $fontErmilov
+                color: $colorBlue
+            h4
+                width: auto
+                display: inline-block
+                font: 300 35px/35px $fontErmilov
+                color: $colorBlue
+            h5
+                width: auto
+                display: inline-block
+                font: 300 30px/30px $fontErmilov
+                color: $colorBlue
+            h6
+                width: auto
+                display: inline-block
+                font: 300 25px/25px $fontErmilov
+                color: $colorBlue
+            p, blockquote
+                font: 500 16px/24px $fontMontserrat
+                color: $colorBlack
+                text-align: justify
+                a
+                    display: inline
+                    font: 500 16px/24px $fontMontserrat
+                    color: $colorBlue
+                    transition: all .3s linear
+                    border-bottom: 1px solid $colorBlue
+                    &:hover
+                        border-bottom: 1px solid transparent
+            blockquote
+                margin: 0 0 30px
+                padding: 15px 30px
+                background-color: rgba(0, 114, 206, 0.15)
+                border-radius: 10px
+                position: relative
+                &:before
+                    content: '\275d'
+                    font: 700 30px/30px $fontMontserrat
+                    color: $colorBlue
+                    position: absolute
+                    top: 17px
+                    left: 7px
+                &:after
+                    content: '\275e'
+                    font: 700 30px/30px $fontMontserrat
+                    color: $colorBlue
+                    position: absolute
+                    bottom: 5px
+                    right: 7px
+            ul, ol
+                li
+                    width: 100%
+                    text-align: justify
+            ul
+                padding: 0
+                list-style: none
+                li
+                    padding: 0 0 0 15px
+                    position: relative
+                    font: 500 16px/24px $fontMontserrat
+                    color: $colorBlack
+                    &:before
+                        content: '\2022'
+                        font: 700 24px/24px "Montserrat", sans-serif
+                        color: #0072ce
+                        position: absolute
+                        top: -2px
+                        left: 0
+                    a
+                        display: inline
+                        font: 500 16px/24px $fontMontserrat
+                        color: $colorBlue
+                        transition: all .3s linear
+                        border-bottom: 1px solid $colorBlue
+                        &:hover
+                            border-bottom: 1px solid transparent
+            ol
+                padding: 0
+                counter-reset: item
+                list-style-type: none
+                li
+                    padding: 0 0 0 20px
+                    font: 500 16px/24px $fontMontserrat
+                    color: $colorBlack
+                    text-indent: 0
+                    position: relative
+                    &:before
+                        counter-increment: item
+                        content: counter(item)'. '
+                        font: 500 16px/24px $fontMontserrat
+                        color: $colorBlue
+                        position: absolute
+                        top: 0
+                        left: 0
+                    a
+                        display: inline
+                        font: 500 16px/24px $fontMontserrat
+                        color: $colorBlue
+                        transition: all .3s linear
+                        border-bottom: 1px solid $colorBlue
+                        &:hover
+                            border-bottom: 1px solid transparent
+            table
+                margin: 0 0 30px
+                overflow-x: scroll
+            table, tr
+                width: 100%
+                display: table
+                table-layout: fixed
+                tr
+                    border-bottom: 2px solid #fff
+                    &:last-child
+                        border-bottom: none
+                    th, td
+                        width: auto
+                        display: table-cell
+                        font: 500 16px/24px $fontMontserrat
+                        color: $colorBlack
+                    th, td
+                        padding: 15px
+                        width: auto
+                        background-color: rgba(45, 41, 38, 0.15)
+                        border-right: 2px solid #fff
+                        font-weight: 700
+                        text-transform: uppercase
+                        text-align: left
+                        &:first-child
+                            border-left: none
+                        &:last-child
+                            border-right: none
+                    th
+                        color: $colorBlue
+                    td
+                        font-weight: 500
+                        text-align: left
+                        text-transform: none
+                        background-color: #f8f9fa
+
+/* ---Begin article style--- */
